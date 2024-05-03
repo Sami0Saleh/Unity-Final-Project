@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] CharacterController _characterController;
-
+    [SerializeField] private CharacterController _characterController;
+ 
     [Header("Layer Masks")]
     [SerializeField] LayerMask _groundLayer;
     [SerializeField] LayerMask _edgeLayer;
@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool _isHangingEdge = false;
     [SerializeField] bool _leavingMB = false;
 
+
+    
     void Update()
     {
         _horizontalInput = Input.GetAxis("Horizontal");
