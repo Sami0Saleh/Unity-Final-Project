@@ -14,10 +14,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask _monkeyBarLayer;
 
     [SerializeField] GameObject _gameObject;
+    [SerializeField] GameObject _Parent;
+
 
     // Private Variables 
     private Vector3 _moveDirection = Vector3.zero;
     private Vector3 _oldMoveDirection;
+    private Vector3 _dashStartPosition;
     private float _gravity = 20.0f;
 
     private float _horizontalInput;
@@ -28,23 +31,25 @@ public class PlayerController : MonoBehaviour
     private float _edgeMovementSpeed = 5f;
     private float _edgeDetectionDistance = 20f;
     private float _edgeHangOffset = 0.5f;
+    private float _dashSpeed = 10f;
+    private float _dashDistance = 5f;
 
-    private bool _isWalking;
-    private bool _isJumping = false;
-    public bool _isDoubleJumping = false;
-    private bool _isDashing = false;
-    public bool _isGrounded = true;
-    private bool _isSpinAttack = false;
+    [SerializeField] bool _isWalking;
+    [SerializeField] bool _isJumping = false;
+    [SerializeField] bool _isDoubleJumping = false;
+    [SerializeField] bool _isDashing = false;
+    [SerializeField] bool _isGrounded = true;
+    [SerializeField] bool _isSpinAttack = false;
 
-    public bool _isHangingMB = false;
-    private bool _isHangingEdge = false;
-    public bool _leavingMB = false;
+    [SerializeField] bool _isHangingMB = false;
+    [SerializeField] bool _isHangingEdge = false;
+    [SerializeField] bool _leavingMB = false;
 
     void Update()
     {
         _horizontalInput = Input.GetAxis("Horizontal");
         _verticalInput = Input.GetAxis("Vertical");
-        _isGrounded = Physics.CheckSphere(transform.position, 0.01f, _groundLayer);
+        /*_isGrounded = Physics.CheckSphere(transform.position, 0.01f, _groundLayer);*/
 
         if (!_isGrounded && !Input.GetButtonDown("Jump") && CheckIfShouldMove())
         {
@@ -54,17 +59,43 @@ public class PlayerController : MonoBehaviour
         else if (_isHangingEdge)
         {
             _isWalking = false;
-            HangingEdge();
+            HangOnEdge();
+            
         }
         else if (_isHangingMB && Input.GetButtonDown("Jump"))
         {
             Debug.Log("let me out");
             _leavingMB = true;
+            LeavingMonkeyBar();
+        }
+        else if (!_isJumping && !_isDoubleJumping && Input.GetButtonDown("Jump"))
+        {
+            Jump();
+            Debug.Log("wow i'm jumping");
+        }
+        else if (_isJumping && Input.GetButtonDown("Jump"))
+        {
+            DoubleJump();
+            Debug.Log("wow i'm jumping again");
+        }
+        else if (!_isDashing && Input.GetKey(KeyCode.Q))
+        {
+            _isDashing = true;
+            _dashStartPosition = transform.position;
+            
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            _isSpinAttack = true;
         }
         else
         {
             if (CheckIfShouldMove())
             { PlayerMovement(); }
+        }
+        if (_isDashing)
+        {
+            Dash();
         }
         if (CheckIfShouldMove())
         { _characterController.Move(_moveDirection * Time.deltaTime); }
@@ -94,54 +125,67 @@ public class PlayerController : MonoBehaviour
         _isWalking = false;
         _moveDirection.y = _jumpHeight;
         _isDoubleJumping = true;
+        _isJumping = false;
+        _isGrounded = false;
     }
 
-    private void HangingEdge()
+    private void HangingEdge(Transform hit)
     {
-        Vector3 currentPos = transform.position;
+        _isGrounded = false;
+
+        _gameObject.transform.SetParent(hit.transform);
+        _gameObject.transform.localPosition = Vector3.zero;
+       /* Vector3 currentPos = transform.position;
         Debug.Log("Detected a edge");
         RaycastHit hit;
         // Perform raycast to detect edges below the character
-        if (Physics.Raycast(transform.position, -transform.up, out hit, _edgeDetectionDistance, _edgeLayer))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, _edgeDetectionDistance, _edgeLayer))
         {
-
-            Physics.Raycast(transform.position, -transform.up, out hit, _edgeDetectionDistance, _edgeLayer);
+           
+            //Physics.Raycast(transform.position, -transform.up, out hit, _edgeDetectionDistance, _edgeLayer);
             Debug.Log("Entered RayCast");
             // Position character at the edge with slight offset
-            Vector3 hangPosition = hit.point + transform.up * _edgeHangOffset;
-            _characterController.Move(/*hangPosition*/ currentPos - transform.position);
+            *//*Vector3 hangPosition = hit.point + transform.up * _edgeHangOffset;
+            _characterController.Move(hangPosition *//*currentPos*//* - transform.position);
 
             // Disable movement along y-axis
-            _moveDirection.y = 0;
+            _moveDirection.y = 0;*//*
 
             // Check for lateral movement input
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
             Vector3 lateralMovement = new Vector3(horizontalInput, 0, verticalInput).normalized * _edgeMovementSpeed;
             _characterController.Move(lateralMovement * Time.deltaTime);
-        }
-        else
-        {
-            // Stop hanging if no edge is detected
-            _isHangingEdge = false;
-        }
+        }*/
 
         // Check for jump input to vault from edge
-        if (Input.GetButtonDown("Jump"))
+        /*if (Input.GetButtonDown("Jump"))
         {
 
             Debug.Log("let Go from Edge");
             JumpFromEdge();
-        }
+        }*/
     }
 
-    private void JumpFromEdge()
+    private void HangOnEdge()
     {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        //float verticalInput = Input.GetAxis("Vertical");
+        Vector3 lateralMovement = new Vector3(horizontalInput, 0, 0).normalized * _edgeMovementSpeed;
+        _characterController.Move(lateralMovement * Time.deltaTime);
+        if (Input.GetButtonDown("Jump"))
+        {
+
+            Debug.Log("let Go from Edge");
+            _moveDirection = transform.forward * _jumpHeight;
+            _moveDirection.y = _jumpHeight;
+            _moveDirection.z = transform.forward.z;
+            _isHangingEdge = false;
+            _gameObject.transform.SetParent(_Parent.transform);
+            _gameObject.transform.localPosition = Vector3.zero;
+        }
         // Apply jump force away from the edge
-        _moveDirection = transform.forward * _jumpHeight;
-        _moveDirection.y = _jumpHeight;
-        _moveDirection.z = transform.forward.z;
-        _isHangingEdge = false;
+        
     }
     private void OnMonkeyBar(Transform hit)
     {
@@ -149,16 +193,43 @@ public class PlayerController : MonoBehaviour
         
         _gameObject.transform.SetParent(hit.transform);
         _gameObject.transform.localPosition = Vector3.zero;
-
-        if (_leavingMB)
-        { return; }
-
+    }
+    private void LeavingMonkeyBar()
+    {
+        _isGrounded = false;
         
-        
+        _gameObject.transform.SetParent(_Parent.transform);
+        _gameObject.transform.localPosition = Vector3.zero;
+
+        Vector3 lateralMovement = new Vector3(0, 0, 1f).normalized * _edgeMovementSpeed;
+        _characterController.Move(lateralMovement * Time.deltaTime);
+        _isHangingMB = false;
+        _leavingMB = false;
+    }
+    private void Dash()
+    {
+        _isWalking = false;
+        float distanceTraveled = Vector3.Distance(_dashStartPosition, transform.position);
+
+        if (distanceTraveled < _dashDistance)
+        {
+            // Continue dashing
+            _characterController.Move(transform.forward * _dashSpeed * Time.deltaTime);
+        }
+        else
+        {
+            // Stop dashing when the desired distance is reached
+            _isDashing = false;
+        }
+    }
+    private void SpinAttack()
+    {
+
+        _isSpinAttack = false;
     }
     private bool CheckIfShouldMove() // checks if the player is hanging on edge or haning on monkey bar and stops him from entering diffrent ifs
     {
-        if (_isHangingEdge || _isHangingMB)
+        if (_isHangingEdge || _isHangingMB || _isDashing)
         {
             return false;
         }
@@ -170,13 +241,18 @@ public class PlayerController : MonoBehaviour
         if (hit.gameObject.CompareTag("edge"))
         {
             _isHangingEdge = true;
+            HangingEdge(hit.transform);
         }
-        else if (hit.gameObject.CompareTag("monkeyBar"))
+        if (hit.gameObject.CompareTag("monkeyBar"))
         {
             Debug.Log("Hanging on monkey Bar");
             OnMonkeyBar(hit.transform);
             _isHangingMB = true;
 
+        }
+        if (hit.gameObject.CompareTag("ground")) 
+        { 
+            _isGrounded = true; 
         }
     }
 
@@ -216,5 +292,10 @@ public class PlayerController : MonoBehaviour
     {
         get { return _isSpinAttack; }
         set { _isSpinAttack = value; }
+    }
+    public bool IsDashing
+    {
+        get { return _isDashing; }
+        set { _isDashing = value; }
     }
 }

@@ -9,7 +9,7 @@ public class AnimatorManager : MonoBehaviour
     [SerializeField] CharacterController _characterController;
     [SerializeField] PlayerController _PContro;
 
-    private bool _hangingMBStarted = true;
+    private bool _hangingMBStarted = false;
     private bool _hangingEdgeStarted = false;
     private bool _edgeMovement = false;
 
