@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "DoubleJump",
+                    "type": "Button",
+                    "id": "a23488b2-6d4b-4a82-b6ce-555fe3b509df",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Dash",
                     "type": "Button",
                     "id": "a29d1b49-3430-4f12-b8d6-3dbbf3ebf4fa",
@@ -97,7 +106,7 @@
                 {
                     "name": "down",
                     "id": "d8850c0a-d7b9-4bbc-9814-40e93347f362",
-                    "path": "<AndroidJoystick>/stick/down",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -108,7 +117,7 @@
                 {
                     "name": "left",
                     "id": "5f17580a-31d3-4663-b342-81a9614c81fd",
-                    "path": "<NimbusGamepadHid>/buttonSouth",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -234,6 +243,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "457c4fb6-61c0-4671-aaf9-0cab8994ded4",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DoubleJump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "115c0b42-5321-46b5-a367-05a321790a7c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DoubleJump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

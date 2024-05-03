@@ -7,7 +7,7 @@ public class AnimatorManager : MonoBehaviour
     [Header("Main Variables")]
     [SerializeField] Animator _playerAnimator;
     [SerializeField] CharacterController _characterController;
-    [SerializeField] PlayerController _PContro;
+    [SerializeField] NewPlayerController _PContro;
 
     private bool _hangingMBStarted = false;
     private bool _hangingEdgeStarted = false;
