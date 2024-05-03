@@ -61,6 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\New Input System\NewPlayerController.cs" />
+    <Compile Include="Assets\Scripts\SaveNLoadJson.cs" />
+    <Compile Include="Assets\New Input System\PlayerInputHandler.cs" />
+    <Compile Include="Assets\Scripts\SeralizedSaveGame.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\AnimatorManager.cs" />
   </ItemGroup>
@@ -897,6 +901,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -1027,6 +1035,10 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
