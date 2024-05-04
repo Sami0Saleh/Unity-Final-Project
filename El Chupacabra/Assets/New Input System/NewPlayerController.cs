@@ -28,6 +28,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] bool _isDoubleJumping = false;
     [SerializeField] bool _isDashing = false;
     [SerializeField] bool _isGrounded = true;
+    [SerializeField] bool _isFalling = false;
     [SerializeField] bool _isSpinAttack = false;
 
     [SerializeField] bool _isHangingMB = false;
@@ -84,13 +85,14 @@ public class NewPlayerController : MonoBehaviour
         if (!_isGrounded && CheckIfShouldMove() && !_inputHandler.DoubleJumpTriggered)
         {
             _moveDirection.y -= _gravity * Time.deltaTime;
+            _isFalling = true;
         }
         else if (_isGrounded && !_isJumping && !_isDoubleJumping && _inputHandler.JumpTriggered)
         {
             Jump();
             Debug.Log("First Jump");
         }
-        else if (!_isGrounded && _isJumping && !_isDoubleJumping && _inputHandler.DoubleJumpTriggered)
+        else if (_isFalling && !_isDoubleJumping && _inputHandler.DoubleJumpTriggered)
         {
             DoubleJump();
             Debug.Log("Second jump");
@@ -262,6 +264,7 @@ public class NewPlayerController : MonoBehaviour
         if (hit.gameObject.CompareTag("ground"))
         {
             _isGrounded = true;
+            _isFalling = false;
         }
     }
 
