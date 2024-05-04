@@ -15,7 +15,7 @@ public class NewPlayerController : MonoBehaviour
     private Vector3 _dashStartPosition;
 
     private float _moveSpeed = 10f;
-    private float _jumpHeight = 10f;
+    private float _jumpHeight = 5.0f;
 
     private float _edgeMovementSpeed = 5f;
     private float _edgeDetectionDistance = 20f;

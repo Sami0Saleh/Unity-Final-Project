@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -25,6 +25,10 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AnimatorManager.cs",
@@ -32,14 +36,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
               "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAQwEYAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T08:18:43.974Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "Assets\\New Input System\\NewPlayerController.cs",
               "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
               "RelativeToolTip": "Assets\\New Input System\\NewPlayerController.cs",
-              "ViewState": "AQIAANgAAAAAAAAAAAAIwPMAAAAcAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBEAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T13:07:15.204Z",
               "EditorCaption": ""
@@ -64,8 +64,7 @@
               "RelativeToolTip": "Assets\\New Input System\\PlayerInputHandler.cs",
               "ViewState": "AQIAAC0AAAAAAAAAAADwvyUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T13:07:15.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T13:07:15.205Z"
             }
           ]
         }
