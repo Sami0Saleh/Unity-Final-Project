@@ -16,48 +16,66 @@ public class AnimatorManager : MonoBehaviour
     void Update()
     {
         if (_PContro.IsSpinAttacking)
-        { TriggerAttack("Spin"); }
-        if (Input.GetMouseButton(1))
-        { TriggerAttack("Dash"); }
+        { TriggerAttack("Spin"); Debug.Log("Spin Anim"); }
+        if (_PContro.IsDashing)
+        { TriggerAttack("Dash"); Debug.Log("Dash Anim"); }
 
         // move right
-        if (!_edgeMovement && Input.GetKeyDown(KeyCode.D))
-        { TriggerHangEdgeMovement(true); }
-        else if (_edgeMovement && Input.GetKeyDown(KeyCode.D))
-        { TriggerHangEdgeMovement(true); SetMirrorBool(false);  }
-        else if (Input.GetKeyUp(KeyCode.D)) { TriggerHangEdgeMovement(false); }
+        /* if (!_edgeMovement && Input.GetKeyDown(KeyCode.D))
+         { TriggerHangEdgeMovement(true); }
+         else if (_edgeMovement && Input.GetKeyDown(KeyCode.D))
+         { TriggerHangEdgeMovement(true); SetMirrorBool(false);  }
+         else if (Input.GetKeyUp(KeyCode.D)) { TriggerHangEdgeMovement(false); }*/
 
         // move left
-        if (!_edgeMovement && Input.GetKeyDown(KeyCode.A))
-        { TriggerHangEdgeMovement(true); }
-        else if (_edgeMovement && Input.GetKeyDown(KeyCode.A))
-        { TriggerHangEdgeMovement(true); SetMirrorBool(true); }
-        else if (Input.GetKeyUp(KeyCode.A)) { TriggerHangEdgeMovement(false); }
+        /* if (!_edgeMovement && Input.GetKeyDown(KeyCode.A))
+         { TriggerHangEdgeMovement(true); }
+         else if (_edgeMovement && Input.GetKeyDown(KeyCode.A))
+         { TriggerHangEdgeMovement(true); SetMirrorBool(true); }
+         else if (Input.GetKeyUp(KeyCode.A)) { TriggerHangEdgeMovement(false); }*/
 
         // leave edge
-        if (_hangingEdgeStarted && Input.GetKey(KeyCode.Space))
-        {
-            LeaveEdge(true);
-        }
-        else if (_hangingEdgeStarted && Input.GetKey(KeyCode.S))
-        {
-            LeaveEdge(false);
-        }
+        /* if (_hangingEdgeStarted && Input.GetKey(KeyCode.Space))
+         {
+             LeaveEdge(true);
+         }
+         else if (_hangingEdgeStarted && Input.GetKey(KeyCode.S))
+         {
+             LeaveEdge(false);
+         }*/
 
         if (_PContro.IsWalking)
-        { TriggerWalkAnim(true); }
-        if (_PContro.IsWalking)
+        { TriggerWalkAnim(true); Debug.Log("Walking Anim"); }
+        if (!_PContro.IsWalking)
         { TriggerWalkAnim(false); }
 
         if (_PContro.IsJumping)
-        { TriggerJumpAnim(true); Debug.Log("Should Jump"); }       
+        { TriggerJumpAnim(true); Debug.Log("Should Jump"); }
         else if (!_PContro.IsJumping)
         { TriggerJumpAnim(false); }
+        if (_PContro.IsDoubleJumping)
+        {
+            TriggerDoubleJumpAnim(true); Debug.Log("Should Double Jump");
+        }
+        else if (!_PContro.IsDoubleJumping)
+        {
+            {
+                TriggerDoubleJumpAnim(false);
+            }
+        }
 
-        if (_PContro.IsHangingMB)
-        { TriggerHangMBIdleAnim(true); }
-        else if (_hangingMBStarted && _PContro.LeavingMB)
-        { TriggerHangMBIdleAnim(false); }
+        if (_PContro.IsGrounded)
+        {
+            TriggerLandingAnimation(true);
+        }
+        else {TriggerLandingAnimation(false);
+    }
+
+
+        /* if (_PContro.IsHangingMB)
+         { TriggerHangMBIdleAnim(true); }
+         else if (_hangingMBStarted && _PContro.LeavingMB)
+         { TriggerHangMBIdleAnim(false); }*/
     } // should convert into lambda
 
     
@@ -77,6 +95,21 @@ public class AnimatorManager : MonoBehaviour
         { _playerAnimator.SetBool("Jumping", false); }
     }
 
+    private void TriggerDoubleJumpAnim(bool trigger)
+    {
+        if (trigger)
+         _playerAnimator.SetBool("DoubleJumping", true);
+        else
+        { _playerAnimator.SetBool("DoubleJumping", false); }
+    }
+    private void TriggerLandingAnimation(bool trigger)
+    {
+        if (trigger)
+        {
+            _playerAnimator.SetBool("Grounded", true);
+        }
+        else { _playerAnimator.SetBool("Grounded", false); }
+    }
     private void TriggerHangMBIdleAnim(bool trigger) // Hang MonkeyBar Animation
     {
         if (trigger)
@@ -136,6 +169,10 @@ public class AnimatorManager : MonoBehaviour
         _playerAnimator.SetBool("IsAttacking", true);
         _playerAnimator.SetTrigger($"{attackType}Attack");
         Invoke($"Reset{attackType}Trigger", 2);
+     /*   if (attackType == "Dash")
+        { ResetDashTrigger(); }
+        else if (attackType == "Spin")
+        { ResetSpinTrigger(); }*/
     }
     private void ResetSpinTrigger() 
     {

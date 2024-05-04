@@ -104,6 +104,7 @@ public class NewPlayerController : MonoBehaviour
         else if (_inputHandler.SpinTriggered)
         {
             _isSpinAttack = true;
+            Invoke("CancelSpin", 2);
         }
         else if (_isHangingEdge)
         {
@@ -137,6 +138,7 @@ public class NewPlayerController : MonoBehaviour
         }
         if (CheckIfShouldMove())
         { _characterController.Move(_moveDirection * Time.deltaTime); }
+
 
     }
 
@@ -237,10 +239,9 @@ public class NewPlayerController : MonoBehaviour
             _isDashing = false;
         }
     }
-    private void SpinAttack()
+    private void CancelSpin()
     {
-
-        _isSpinAttack = false;
+      _isSpinAttack = false;
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -274,6 +275,12 @@ public class NewPlayerController : MonoBehaviour
         get { return _isJumping; }
         set { _isJumping = value; }
     }
+    public bool IsDoubleJumping
+    {
+        get { return _isDoubleJumping; }
+        set { _isDoubleJumping = value; }
+    }
+
     public bool IsGrounded
     {
         get { return _isGrounded; }
