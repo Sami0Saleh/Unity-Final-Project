@@ -61,6 +61,7 @@ public class NewPlayerController : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(_inputHandler.DoubleJumpTriggered);
         HandleMovement();
         HandleRotation();
     }
@@ -80,7 +81,7 @@ public class NewPlayerController : MonoBehaviour
 
         /*_isGrounded = Physics.CheckSphere(transform.position, 0.01f, _groundLayer);*/
 
-        if (!_isGrounded && CheckIfShouldMove())
+        if (!_isGrounded && CheckIfShouldMove() && !_inputHandler.DoubleJumpTriggered)
         {
             _moveDirection.y -= _gravity * Time.deltaTime;
         }
@@ -89,7 +90,7 @@ public class NewPlayerController : MonoBehaviour
             Jump();
             Debug.Log("First Jump");
         }
-        else if (!_isGrounded && _isJumping && !_isDoubleJumping && !_inputHandler.JumpTriggered && _inputHandler.DoubleJumpTriggered)
+        else if (!_isGrounded && _isJumping && !_isDoubleJumping && _inputHandler.DoubleJumpTriggered)
         {
             DoubleJump();
             Debug.Log("Second jump");
