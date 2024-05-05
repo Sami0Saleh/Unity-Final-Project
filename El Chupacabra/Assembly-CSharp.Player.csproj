@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\SaveNLoadJson.cs" />
     <Compile Include="Assets\Scripts\Game State\GameStateManager.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\LoadUI.cs" />
+    <Compile Include="Assets\Imported Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />
     <Compile Include="Assets\New Input System\PlayerInputHandler.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\GameOverUI.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\GameWonUI.cs" />
