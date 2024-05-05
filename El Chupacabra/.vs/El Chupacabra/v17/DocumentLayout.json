@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\ui scripts\\pauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\pauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\game state\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game state\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\game state\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game state\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\player scripts\\animatormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +34,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "GameStateManager.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T00:31:59.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Game State\\GameState.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Game State\\GameState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T00:30:06.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PauseUI.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAgwBcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T22:54:57.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AnimatorManager.cs",
               "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
@@ -38,26 +87,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NewPlayerController.cs",
               "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\New Input System\\NewPlayerController.cs",
               "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
               "RelativeToolTip": "Assets\\New Input System\\NewPlayerController.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAowF4AAAAbAAAA",
+              "ViewState": "AQIAAAsBAAAAAAAAAAAmwBUBAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T13:07:15.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerInputHandler.cs",
               "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\PlayerInputHandler.cs",
               "RelativeDocumentMoniker": "Assets\\New Input System\\PlayerInputHandler.cs",
               "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\PlayerInputHandler.cs",
               "RelativeToolTip": "Assets\\New Input System\\PlayerInputHandler.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAAEkAAAAAAAAA",
+              "ViewState": "AQIAAGAAAAAAAAAAAAA4wHYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T13:07:15.205Z",
               "EditorCaption": ""

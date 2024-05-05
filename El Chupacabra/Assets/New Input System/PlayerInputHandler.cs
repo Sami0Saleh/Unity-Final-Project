@@ -20,6 +20,7 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] private string _dash = "Dash";
     [SerializeField] private string _spin = "Spin";
     [SerializeField] private string _sprint = "Sprint";
+    [SerializeField] private string _pause = "Pause";
 
     private InputAction _moveAction;
     private InputAction _lookAction;
@@ -28,6 +29,7 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction _dashAction;
     private InputAction _spinAction;
     private InputAction _sprintAction;
+    private InputAction _pauseAction;
 
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
@@ -35,6 +37,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DoubleJumpTriggered { get; private set; }
     public bool DashTriggered { get; private set; }
     public bool SpinTriggered { get; private set; }
+    public bool PauseTriggered { get; private set; }
 
     public float SprintValue { get; private set; }
 
@@ -60,6 +63,7 @@ public class PlayerInputHandler : MonoBehaviour
         _dashAction = _playerControls.FindActionMap(_actionMapName).FindAction(_dash);
         _spinAction = _playerControls.FindActionMap(_actionMapName).FindAction(_spin);
         _sprintAction = _playerControls.FindActionMap(_actionMapName).FindAction(_sprint);
+        _pauseAction = _playerControls.FindActionMap(_actionMapName).FindAction(_pause);
 
         RegisterInputActions();
     }
@@ -84,6 +88,9 @@ public class PlayerInputHandler : MonoBehaviour
         _spinAction.started += context => SpinTriggered = true;
         _spinAction.canceled += context => SpinTriggered = false;
 
+        _pauseAction.started += context => PauseTriggered = true;
+        _pauseAction.canceled += context => PauseTriggered = false;
+
         _sprintAction.started += context => SprintValue = context.ReadValue<float>();
         _sprintAction.canceled += context => SprintValue = 0f;
     }
@@ -96,6 +103,7 @@ public class PlayerInputHandler : MonoBehaviour
         _dashAction.Enable();
         _spinAction.Enable();
         _sprintAction.Enable();
+        _pauseAction.Enable();
 
     }
 
@@ -108,6 +116,7 @@ public class PlayerInputHandler : MonoBehaviour
         _dashAction?.Disable();
         _spinAction?.Disable();
         _sprintAction?.Disable();
+        _pauseAction?.Disable();
     }
 
      

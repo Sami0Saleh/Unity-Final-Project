@@ -63,16 +63,24 @@
     <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\New Input System\NewPlayerController.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\OptionsUI.cs" />
+    <Compile Include="Assets\Scripts\Game State\GameState.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseMainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseUI.cs" />
     <Compile Include="Assets\Scripts\SaveNLoadJson.cs" />
+    <Compile Include="Assets\Scripts\Game State\GameStateManager.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\LoadUI.cs" />
     <Compile Include="Assets\New Input System\PlayerInputHandler.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\GameOverUI.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\GameWonUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseSaveUI.cs" />
     <Compile Include="Assets\Scripts\SeralizedSaveGame.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\CreditsUI.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameEndManager.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\AnimatorManager.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseLoadUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseOptionsUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

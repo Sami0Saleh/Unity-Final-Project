@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,6 +9,7 @@ public class NewPlayerController : MonoBehaviour
 {
     [SerializeField] GameObject _gameObject;
     [SerializeField] GameObject _Parent;
+    [SerializeField] PauseUI _pause;
 
     // Private Variables 
     private Vector3 _moveDirection = Vector3.zero;
@@ -55,6 +57,14 @@ public class NewPlayerController : MonoBehaviour
     private Vector3 _currentMovement;
     private float verticalRotation;
 
+    private void Awake()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
     private void Start()
     {
         _inputHandler = PlayerInputHandler.Instance;
@@ -62,26 +72,11 @@ public class NewPlayerController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_inputHandler.DoubleJumpTriggered);
         HandleMovement();
         HandleRotation();
     }
     private void HandleMovement()
     {
-        /*
-          Vector3 inputDirection = new Vector3(_inputHandler.MoveInput.x, 0f, _inputHandler.MoveInput.y);
-          Vector3 worldDirection = transform.TransformDirection(inputDirection);
-          worldDirection.Normalize();
-
-          float speed = _walkSpeed * (_inputHandler.SprintValue > 0 ? _sprintMultiplier : 1f);
-          _currentMovement.x = worldDirection.x * speed;
-          _currentMovement.z = worldDirection.z * speed;
-
-          HandleJumping();
-          _characterController.Move(_currentMovement * Time.deltaTime); */
-
-        /*_isGrounded = Physics.CheckSphere(transform.position, 0.01f, _groundLayer);*/
-
         if (!_isGrounded && CheckIfShouldMove() && !_inputHandler.DoubleJumpTriggered)
         {
             _moveDirection.y -= _gravity * Time.deltaTime;
@@ -140,7 +135,10 @@ public class NewPlayerController : MonoBehaviour
         }
         if (CheckIfShouldMove())
         { _characterController.Move(_moveDirection * Time.deltaTime); }
-
+        if (_inputHandler.PauseTriggered)
+        {
+            _pause.PauseGame();
+        }
 
     }
 
@@ -245,7 +243,11 @@ public class NewPlayerController : MonoBehaviour
     {
       _isSpinAttack = false;
     }
+    private void StopMovement()
+    {
+        _moveDirection = Vector3.zero;
 
+    }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
 
@@ -265,6 +267,19 @@ public class NewPlayerController : MonoBehaviour
         {
             _isGrounded = true;
             _isFalling = false;
+        }
+    }
+
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
+        if (newGameState == GameState.GamePlay) { _inputHandler.gameObject.SetActive(true); }
+            //_animator.speed = 1;
+        else
+        {
+            _inputHandler.gameObject.SetActive(false);
+            //_animator.speed = 0;
+            StopMovement();
         }
     }
 
