@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9206427165382240329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5328809438831593409}
+  m_Layer: 0
+  m_Name: Thorn Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5328809438831593409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206427165382240329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.188, z: 0.592}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8421100719220413117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &460439477089850231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,6 +110,16 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 2467390577257646279}
+    - target: {fileID: 8482072047196669673, guid: c892ebbb59e99eb4db60e251fe4d3f28,
+        type: 3}
+      propertyPath: _enemyAgent
+      value: 
+      objectReference: {fileID: 51619872126842679}
+    - target: {fileID: 8482072047196669673, guid: c892ebbb59e99eb4db60e251fe4d3f28,
+        type: 3}
+      propertyPath: _thornSpawner
+      value: 
+      objectReference: {fileID: 5328809438831593409}
     - target: {fileID: 8788173875354196848, guid: c892ebbb59e99eb4db60e251fe4d3f28,
         type: 3}
       propertyPath: m_Name
@@ -86,9 +127,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8268060531918275018, guid: c892ebbb59e99eb4db60e251fe4d3f28,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 5328809438831593409}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c892ebbb59e99eb4db60e251fe4d3f28, type: 3}
+--- !u!195 &51619872126842679 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 492206567265494080, guid: c892ebbb59e99eb4db60e251fe4d3f28,
+    type: 3}
+  m_PrefabInstance: {fileID: 460439477089850231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &2467390577257646279 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2620569330388523952, guid: c892ebbb59e99eb4db60e251fe4d3f28,
@@ -115,6 +166,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4454968991917928178, guid: d430ca8b03df89e4c9803e66f2fa4aaf,
         type: 3}
+    - target: {fileID: 5058920277262009860, guid: aebf9a07fa0841a4791df78fcdc23919,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6359443586738129163, guid: aebf9a07fa0841a4791df78fcdc23919,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -123,12 +179,12 @@ PrefabInstance:
     - target: {fileID: 6359443586738129163, guid: aebf9a07fa0841a4791df78fcdc23919,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 6359443586738129163, guid: aebf9a07fa0841a4791df78fcdc23919,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -28.17
       objectReference: {fileID: 0}
     - target: {fileID: 6359443586738129163, guid: aebf9a07fa0841a4791df78fcdc23919,
         type: 3}
@@ -169,6 +225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shooter Enemy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853500608512693886, guid: aebf9a07fa0841a4791df78fcdc23919,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -35.17
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9092143281368094196, guid: aebf9a07fa0841a4791df78fcdc23919, type: 3}

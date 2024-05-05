@@ -12,6 +12,7 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField] Transform _player; 
     [SerializeField] GameObject _projectile;
     [SerializeField] Animator _animator;
+    [SerializeField] Transform _thornSpawner;
 
     [SerializeField] MeshRenderer _pointA;
     [SerializeField] MeshRenderer _pointB;
@@ -103,13 +104,16 @@ public class BaseEnemy : MonoBehaviour
 
     private void AttackPlayer()
     {
-        //make sure the enemey does NOT MOVE
-
+        
+        _enemyAgent.velocity = Vector3.zero;
         _animator.SetBool("Attacking", true);
-        _enemyAgent.SetDestination(_player.position); transform.LookAt(_player);
+        _enemyAgent.SetDestination(_player.position); 
+
+        transform.LookAt(_player);
 
         if (!_attackAlready)
         {
+            Debug.Log(_type);
             switch (_type)
             {
                 case "Shooter": ShooterAttack(); break;
@@ -158,8 +162,8 @@ public class BaseEnemy : MonoBehaviour
 
     private void ShooterAttack()
     {
-        _enemyAgent.speed = 0;
-        Instantiate(_projectile, transform.position, transform.rotation);
+        Debug.Log("Im Shooting Youu");
+        Instantiate(_projectile, _thornSpawner.position, _thornSpawner.rotation);
         _attackAlready = true;
         Invoke(nameof(ResetAttack), _timeBetweenAttacks);
     }
