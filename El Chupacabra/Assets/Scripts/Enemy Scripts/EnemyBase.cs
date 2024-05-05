@@ -68,7 +68,6 @@ public class BaseEnemy : MonoBehaviour
         }
         else if(_playerIsInMySight && _playerInAttackRange)
         {
-            
             AttackPlayer();
         }
     }
@@ -159,6 +158,7 @@ public class BaseEnemy : MonoBehaviour
 
     private void ShooterAttack()
     {
+        _enemyAgent.speed = 0;
         Instantiate(_projectile, transform.position, transform.rotation);
         _attackAlready = true;
         Invoke(nameof(ResetAttack), _timeBetweenAttacks);
