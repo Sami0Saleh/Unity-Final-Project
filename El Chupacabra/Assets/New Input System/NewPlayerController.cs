@@ -10,6 +10,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] GameObject _gameObject;
     [SerializeField] GameObject _Parent;
     [SerializeField] PauseUI _pause;
+    [SerializeField] UIManager _uiManager;
 
     // Private Variables 
     private Vector3 _moveDirection = Vector3.zero;
@@ -24,6 +25,10 @@ public class NewPlayerController : MonoBehaviour
     private float _edgeHangOffset = 0.5f;
     private float _dashSpeed = 10f;
     private float _dashDistance = 5f;
+
+    [SerializeField] int _maxHp = 3;
+    [SerializeField] int _currentHp;
+    [SerializeField] int _score = 0;
 
     [SerializeField] bool _isWalking;
     [SerializeField] bool _isJumping = false;
@@ -68,6 +73,9 @@ public class NewPlayerController : MonoBehaviour
     private void Start()
     {
         _inputHandler = PlayerInputHandler.Instance;
+        _currentHp = _maxHp;
+        UpdateHP();
+        UpdateScore();
     }
 
     private void Update()
@@ -245,6 +253,14 @@ public class NewPlayerController : MonoBehaviour
     {
         _moveDirection = Vector3.zero;
 
+    }
+    private void UpdateHP()
+    {
+        _uiManager.UpdateHP(_maxHp, _currentHp);
+    }
+    public void UpdateScore()
+    {
+        _uiManager.UpdateScore(_score);
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

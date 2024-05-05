@@ -74,12 +74,15 @@
     <Compile Include="Assets\New Input System\PlayerInputHandler.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\GameOverUI.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\GameWonUI.cs" />
+    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PauseSaveUI.cs" />
     <Compile Include="Assets\Scripts\SeralizedSaveGame.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\CreditsUI.cs" />
     <Compile Include="Assets\Scripts\Managers\GameEndManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemySO\EnemyScriptableObject.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\AnimatorManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PauseLoadUI.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PauseOptionsUI.cs" />
   </ItemGroup>
@@ -877,6 +880,10 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Burst">
