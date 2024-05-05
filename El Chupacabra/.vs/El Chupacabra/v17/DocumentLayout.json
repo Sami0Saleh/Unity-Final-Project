@@ -3,28 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\player scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\imported assets\\simplecollectiblespack\\simplecollectiblescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\imported assets\\simplecollectiblespack\\simplecollectiblescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\ui scripts\\pauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\pauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\player scripts\\animatormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\game state\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game state\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\enemy scripts\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy scripts\\enemybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\enemy scripts\\enemyso\\enemyscriptableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy scripts\\enemyso\\enemyscriptableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\player scripts\\animatormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player scripts\\animatormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\seralizedsavegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\seralizedsavegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\game state\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game state\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\savenloadjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\savenloadjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\player scripts\\animatormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player scripts\\animatormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +52,147 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SeralizedSaveGame.cs",
-              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\SeralizedSaveGame.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SeralizedSaveGame.cs",
-              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\SeralizedSaveGame.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SeralizedSaveGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARSSURBVEhL7VRLTxtXFD53ZuzBHpu3nbpADcaRCkZCoLQLCIh20UikrdhQmj\u002BQTaUsyaZR0kWkSpGSrFm2UoWKSCohtRKUAq7SwALRAIaCscHUNZjxgF2PH\u002BN53J6ZIipF3WRVVcpnzYx87ne/87wXXuM/Bzn/wl16lxmCIUaMiMzU1hREIpHzFQDHmw4aqAsYU59M6eZ/Sim7urrKTAD\u002B4hMGHaUGmrl7U/fIomfRWFpcMuALMG3AmC8ToyejTmaP8UmnUpBKNGi324MVeyXocrmCdaW6Vr7MN5xTIZ/P18dIzF/ZqbR2Rbsa0WTLlXMtulNv57d4Xyd0Ov9motfzLygFpVdRlE8JkAHKUQAW01MJaIYGLMemNF37AWmPTa5GtRugw3We5YFw5EcUn9YU7SEH3Fu4f1nl1EmkhU2uVaKNxMYHL9IvRuKZ\u002BHtpOd1WqpSgwdkAPMcDx3BACDlkGXb6Vv\u002Bth6b4zNbMyHJiuStyHIFkLhn1CJ6NgfaBj7bT27XJbPJQrsiLuOfp3p29WatEO\u002BJONy68e5w/9mOktpA3pHa\u002B0bnS7ete6PB2zPvr/M98Lt8ewzAsrlermiqoulqlUrWKAhV0qlcXK8UqzJY3qOHAHgnUoA5T2yrRWmqtLlfKNZjiXpc3e6XlShQofM3beFExFE0uySVFV44EQZBRKOyv94dOCid\u002BsSASqSjFg95geDAw2IccN\u002BqIhUphkzXYnX8cJNdAsAvgFbwFn\u002BDb7m3unUbzDDY4g6lak2MCIyOeOs/zEISGUby8f7YPsUzscPz98ec\u002Bp68QSUfoYfYwI8rizm5oN2rusUqUyCUAIwUbZ8tijX92u92P8Em/LI4fa1qO/zyuPS2dcgWlYNMNvfbJ\u002BpMWdGTPl/OkolWchCGNgUjAmjorA8MwTAHsOAGOuxisl8GheLM5LbPR2XfCsXDjvrRPimrxw8nVyf6F3YVmWZG5glrowZ7YWBvrxj2PrQwuCZesacmWsxCX4qbp32BU89VZ7M13bbVtm9h8uammSeZYLtJc0/x0uGM4e9lzWa\u002BpqkkyhFnG7FfNTVa4vS29kFfygBE4sK7t49Pj1/sCfYCCgGcDclquOPHLxNHNvpsxnP\u002B5QEPAjU1Op3Ipgs\u002Bvfa19z/rb\u002BuvT\u002BbTnRD7ZwUB/qmKqNi8c9DT1nMWkmIQpV5fVci9Og4BEMM8D9gRKaimNjsIY1W9I/0PMibMJKbEp8AIhLDm6//H938Uz8asl55Lg5JwZqtHExp2NM1PbOmgr8ZVr68n1kdhpbCgjZwJmPxrdjeDgHFbpcP4TLGG/vX3t9ucm/1VwcdnNR\u002BYHxZJ440A6GAzvheFIPrLsHpcHfNW\u002BlNft/f7ByINHlvEVcHHZ8Qy/xhHuSx30MbyDxvBqGNM1fYyqdAyn7DOlqHxzTn0lXDiYe3uuIFEp5dJdUZ3o0aw9Gy26ilEsTbTsKB9c5a5mzqmv8b8CwF/aTj8kK1otwwAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-05-03T13:07:15.161Z"
+              "DocumentIndex": 0,
+              "Title": "SimpleCollectibleScript.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Imported Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Imported Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Imported Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
+              "RelativeToolTip": "Assets\\Imported Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T14:15:30.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SaveNLoadJson.cs",
-              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\SaveNLoadJson.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SaveNLoadJson.cs",
-              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\SaveNLoadJson.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SaveNLoadJson.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARSSURBVEhL7VRLTxtXFD53ZuzBHpu3nbpADcaRCkZCoLQLCIh20UikrdhQmj\u002BQTaUsyaZR0kWkSpGSrFm2UoWKSCohtRKUAq7SwALRAIaCscHUNZjxgF2PH\u002BN53J6ZIipF3WRVVcpnzYx87ne/87wXXuM/Bzn/wl16lxmCIUaMiMzU1hREIpHzFQDHmw4aqAsYU59M6eZ/Sim7urrKTAD\u002B4hMGHaUGmrl7U/fIomfRWFpcMuALMG3AmC8ToyejTmaP8UmnUpBKNGi324MVeyXocrmCdaW6Vr7MN5xTIZ/P18dIzF/ZqbR2Rbsa0WTLlXMtulNv57d4Xyd0Ov9motfzLygFpVdRlE8JkAHKUQAW01MJaIYGLMemNF37AWmPTa5GtRugw3We5YFw5EcUn9YU7SEH3Fu4f1nl1EmkhU2uVaKNxMYHL9IvRuKZ\u002BHtpOd1WqpSgwdkAPMcDx3BACDlkGXb6Vv\u002Bth6b4zNbMyHJiuStyHIFkLhn1CJ6NgfaBj7bT27XJbPJQrsiLuOfp3p29WatEO\u002BJONy68e5w/9mOktpA3pHa\u002B0bnS7ete6PB2zPvr/M98Lt8ewzAsrlermiqoulqlUrWKAhV0qlcXK8UqzJY3qOHAHgnUoA5T2yrRWmqtLlfKNZjiXpc3e6XlShQofM3beFExFE0uySVFV44EQZBRKOyv94dOCid\u002BsSASqSjFg95geDAw2IccN\u002BqIhUphkzXYnX8cJNdAsAvgFbwFn\u002BDb7m3unUbzDDY4g6lak2MCIyOeOs/zEISGUby8f7YPsUzscPz98ec\u002Bp68QSUfoYfYwI8rizm5oN2rusUqUyCUAIwUbZ8tijX92u92P8Em/LI4fa1qO/zyuPS2dcgWlYNMNvfbJ\u002BpMWdGTPl/OkolWchCGNgUjAmjorA8MwTAHsOAGOuxisl8GheLM5LbPR2XfCsXDjvrRPimrxw8nVyf6F3YVmWZG5glrowZ7YWBvrxj2PrQwuCZesacmWsxCX4qbp32BU89VZ7M13bbVtm9h8uammSeZYLtJc0/x0uGM4e9lzWa\u002BpqkkyhFnG7FfNTVa4vS29kFfygBE4sK7t49Pj1/sCfYCCgGcDclquOPHLxNHNvpsxnP\u002B5QEPAjU1Op3Ipgs\u002Bvfa19z/rb\u002BuvT\u002BbTnRD7ZwUB/qmKqNi8c9DT1nMWkmIQpV5fVci9Og4BEMM8D9gRKaimNjsIY1W9I/0PMibMJKbEp8AIhLDm6//H938Uz8asl55Lg5JwZqtHExp2NM1PbOmgr8ZVr68n1kdhpbCgjZwJmPxrdjeDgHFbpcP4TLGG/vX3t9ucm/1VwcdnNR\u002BYHxZJ440A6GAzvheFIPrLsHpcHfNW\u002BlNft/f7ByINHlvEVcHHZ8Qy/xhHuSx30MbyDxvBqGNM1fYyqdAyn7DOlqHxzTn0lXDiYe3uuIFEp5dJdUZ3o0aw9Gy26ilEsTbTsKB9c5a5mzqmv8b8CwF/aTj8kK1otwwAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-05-03T13:07:15.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NewPlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\New Input System\\NewPlayerController.cs",
-              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
-              "RelativeToolTip": "Assets\\New Input System\\NewPlayerController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwFcAAAAAAAAA",
+              "Title": "GameStateManager.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Game State\\GameStateManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T13:07:15.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAQwAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T13:07:15.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-05T00:31:59.78Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PlayerInputHandler.cs",
-              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\PlayerInputHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\New Input System\\PlayerInputHandler.cs",
-              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\PlayerInputHandler.cs",
-              "RelativeToolTip": "Assets\\New Input System\\PlayerInputHandler.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAIwGQAAAAhAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARSSURBVEhL7VRLTxtXFD53ZuzBHpu3nbpADcaRCkZCoLQLCIh20UikrdhQmj\u002BQTaUsyaZR0kWkSpGSrFm2UoWKSCohtRKUAq7SwALRAIaCscHUNZjxgF2PH\u002BN53J6ZIipF3WRVVcpnzYx87ne/87wXXuM/Bzn/wl16lxmCIUaMiMzU1hREIpHzFQDHmw4aqAsYU59M6eZ/Sim7urrKTAD\u002B4hMGHaUGmrl7U/fIomfRWFpcMuALMG3AmC8ToyejTmaP8UmnUpBKNGi324MVeyXocrmCdaW6Vr7MN5xTIZ/P18dIzF/ZqbR2Rbsa0WTLlXMtulNv57d4Xyd0Ov9motfzLygFpVdRlE8JkAHKUQAW01MJaIYGLMemNF37AWmPTa5GtRugw3We5YFw5EcUn9YU7SEH3Fu4f1nl1EmkhU2uVaKNxMYHL9IvRuKZ\u002BHtpOd1WqpSgwdkAPMcDx3BACDlkGXb6Vv\u002Bth6b4zNbMyHJiuStyHIFkLhn1CJ6NgfaBj7bT27XJbPJQrsiLuOfp3p29WatEO\u002BJONy68e5w/9mOktpA3pHa\u002B0bnS7ete6PB2zPvr/M98Lt8ewzAsrlermiqoulqlUrWKAhV0qlcXK8UqzJY3qOHAHgnUoA5T2yrRWmqtLlfKNZjiXpc3e6XlShQofM3beFExFE0uySVFV44EQZBRKOyv94dOCid\u002BsSASqSjFg95geDAw2IccN\u002BqIhUphkzXYnX8cJNdAsAvgFbwFn\u002BDb7m3unUbzDDY4g6lak2MCIyOeOs/zEISGUby8f7YPsUzscPz98ec\u002Bp68QSUfoYfYwI8rizm5oN2rusUqUyCUAIwUbZ8tijX92u92P8Em/LI4fa1qO/zyuPS2dcgWlYNMNvfbJ\u002BpMWdGTPl/OkolWchCGNgUjAmjorA8MwTAHsOAGOuxisl8GheLM5LbPR2XfCsXDjvrRPimrxw8nVyf6F3YVmWZG5glrowZ7YWBvrxj2PrQwuCZesacmWsxCX4qbp32BU89VZ7M13bbVtm9h8uammSeZYLtJc0/x0uGM4e9lzWa\u002BpqkkyhFnG7FfNTVa4vS29kFfygBE4sK7t49Pj1/sCfYCCgGcDclquOPHLxNHNvpsxnP\u002B5QEPAjU1Op3Ipgs\u002Bvfa19z/rb\u002BuvT\u002BbTnRD7ZwUB/qmKqNi8c9DT1nMWkmIQpV5fVci9Og4BEMM8D9gRKaimNjsIY1W9I/0PMibMJKbEp8AIhLDm6//H938Uz8asl55Lg5JwZqtHExp2NM1PbOmgr8ZVr68n1kdhpbCgjZwJmPxrdjeDgHFbpcP4TLGG/vX3t9ucm/1VwcdnNR\u002BYHxZJ440A6GAzvheFIPrLsHpcHfNW\u002BlNft/f7ByINHlvEVcHHZ8Qy/xhHuSx30MbyDxvBqGNM1fYyqdAyn7DOlqHxzTn0lXDiYe3uuIFEp5dJdUZ3o0aw9Gy26ilEsTbTsKB9c5a5mzqmv8b8CwF/aTj8kK1otwwAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-05-03T13:07:15.205Z"
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Game State\\GameState.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Game State\\GameState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Game State\\GameState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T00:30:06.728Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PauseUI.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\PauseUI.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAgwBcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T22:54:57.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AnimatorManager.cs",
               "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
               "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAQwEYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T13:07:16.148Z",
+              "WhenOpened": "2024-05-04T08:18:43.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewPlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\New Input System\\NewPlayerController.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
+              "RelativeToolTip": "Assets\\New Input System\\NewPlayerController.cs",
+              "ViewState": "AQIAAAsBAAAAAAAAAAAmwBUBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:07:15.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyScriptableObject.cs",
+              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Enemy Scripts\\EnemySO\\EnemyScriptableObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\EnemySO\\EnemyScriptableObject.cs",
+              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Enemy Scripts\\EnemySO\\EnemyScriptableObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\EnemySO\\EnemyScriptableObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T09:05:06.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyBase.cs",
+              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Enemy Scripts\\EnemyBase.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\EnemyBase.cs",
+              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Enemy Scripts\\EnemyBase.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\EnemyBase.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAgwEUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T08:24:00.248Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AnimatorManager.cs",
+              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
+              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\AnimatorManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T08:18:43.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NewPlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\New Input System\\NewPlayerController.cs",
+              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\NewPlayerController.cs",
+              "RelativeToolTip": "Assets\\New Input System\\NewPlayerController.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAgwJUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:07:15.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerInputHandler.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\PlayerInputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\New Input System\\PlayerInputHandler.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\New Input System\\PlayerInputHandler.cs",
+              "RelativeToolTip": "Assets\\New Input System\\PlayerInputHandler.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAcwHYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T13:07:15.205Z"
             }
           ]
         }

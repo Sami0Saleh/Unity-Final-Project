@@ -62,15 +62,28 @@
   <ItemGroup>
     <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\New Input System\NewPlayerController.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\OptionsUI.cs" />
+    <Compile Include="Assets\Scripts\Game State\GameState.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseMainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseUI.cs" />
     <Compile Include="Assets\Scripts\SaveNLoadJson.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\CreditsUI.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\OptionsUI.cs" />
+    <Compile Include="Assets\Scripts\Game State\GameStateManager.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\LoadUI.cs" />
+    <Compile Include="Assets\Imported Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />
     <Compile Include="Assets\New Input System\PlayerInputHandler.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\GameOverUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\GameWonUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseSaveUI.cs" />
     <Compile Include="Assets\Scripts\SeralizedSaveGame.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\MainMenuUI.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\CreditsUI.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameEndManager.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseLoadUI.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseOptionsUI.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemySO\EnemyScriptableObject.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\AnimatorManager.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\LoadUI.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemyBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported Assets\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
@@ -950,6 +963,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1042,6 +1059,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1070,16 +1091,24 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">

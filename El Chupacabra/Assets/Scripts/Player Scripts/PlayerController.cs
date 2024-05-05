@@ -137,36 +137,7 @@ public class PlayerController : MonoBehaviour
 
         _gameObject.transform.SetParent(hit.transform);
         _gameObject.transform.localPosition = Vector3.zero;
-       /* Vector3 currentPos = transform.position;
-        Debug.Log("Detected a edge");
-        RaycastHit hit;
-        // Perform raycast to detect edges below the character
-        if (Physics.Raycast(transform.position, transform.forward, out hit, _edgeDetectionDistance, _edgeLayer))
-        {
-           
-            //Physics.Raycast(transform.position, -transform.up, out hit, _edgeDetectionDistance, _edgeLayer);
-            Debug.Log("Entered RayCast");
-            // Position character at the edge with slight offset
-            *//*Vector3 hangPosition = hit.point + transform.up * _edgeHangOffset;
-            _characterController.Move(hangPosition *//*currentPos*//* - transform.position);
-
-            // Disable movement along y-axis
-            _moveDirection.y = 0;*//*
-
-            // Check for lateral movement input
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
-            Vector3 lateralMovement = new Vector3(horizontalInput, 0, verticalInput).normalized * _edgeMovementSpeed;
-            _characterController.Move(lateralMovement * Time.deltaTime);
-        }*/
-
-        // Check for jump input to vault from edge
-        /*if (Input.GetButtonDown("Jump"))
-        {
-
-            Debug.Log("let Go from Edge");
-            JumpFromEdge();
-        }*/
+      
     }
 
     private void HangOnEdge()
