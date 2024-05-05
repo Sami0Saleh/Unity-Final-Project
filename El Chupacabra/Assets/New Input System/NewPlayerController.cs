@@ -48,7 +48,7 @@ public class NewPlayerController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private CharacterController _characterController;
-    [SerializeField] CinemachineVirtualCamera _mainCamera;
+    [SerializeField] CinemachineFreeLook _mainCamera;
     [SerializeField] PlayerInputHandler _inputHandler;
 
     private Vector3 _currentMovement;
@@ -144,13 +144,12 @@ public class NewPlayerController : MonoBehaviour
 
     private void HandleRotation() // need to make a third person with cinemacine
     {
-        //_mainCamera.transform.Rotate(0f, mouseXRotation, 0f);
-       
-        
-        float mouseXRotation = _inputHandler.LookInput.x * _mouseSensitivitiy;
-        verticalRotation -= _inputHandler.LookInput.y * mouseXRotation;
-        verticalRotation = Mathf.Clamp(verticalRotation, -_upDownRange, _upDownRange);
-        _mainCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+        /*   float mouseXRotation = _inputHandler.LookInput.x * _mouseSensitivitiy;
+           verticalRotation -= _inputHandler.LookInput.y * mouseXRotation;
+           verticalRotation = Mathf.Clamp(verticalRotation, -_upDownRange, _upDownRange);*/
+        Debug.Log(_inputHandler.LookInput);
+        _mainCamera.m_XAxis.Value += _inputHandler.LookInput.x;
+        _mainCamera.m_YAxis.Value += (_inputHandler.LookInput.y / 100);
     }
     private bool CheckIfShouldMove() // checks if the player is hanging on edge or haning on monkey bar and stops him from entering diffrent ifs
     {
