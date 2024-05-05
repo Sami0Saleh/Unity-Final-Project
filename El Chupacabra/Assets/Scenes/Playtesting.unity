@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3254,9 +3254,20 @@ PrefabInstance:
       objectReference: {fileID: 7378642632881554799}
     - target: {fileID: 8346736731402032542, guid: 581c6b907bebf8e4eae22b059807d106,
         type: 3}
+      propertyPath: _enemySO
+      value: 
+      objectReference: {fileID: 11400000, guid: d14b190ab7f6f2c439e737c0afcda326,
+        type: 2}
+    - target: {fileID: 8346736731402032542, guid: 581c6b907bebf8e4eae22b059807d106,
+        type: 3}
       propertyPath: _enemyAgent
       value: 
       objectReference: {fileID: 925642172}
+    - target: {fileID: 8346736731402032542, guid: 581c6b907bebf8e4eae22b059807d106,
+        type: 3}
+      propertyPath: _thornSpawner
+      value: 
+      objectReference: {fileID: 2031636524}
     - target: {fileID: 9070037865541387095, guid: 581c6b907bebf8e4eae22b059807d106,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9011,6 +9022,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994900007}
   m_CullTransparentMesh: 1
+--- !u!4 &2031636524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5328809438831593409, guid: 581c6b907bebf8e4eae22b059807d106,
+    type: 3}
+  m_PrefabInstance: {fileID: 648115460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2043886260
 GameObject:
   m_ObjectHideFlags: 3
@@ -9939,6 +9956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0af539c19766a41a05a222b052678b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RotateSpeed: 0
   _gameObject: {fileID: 2097729223}
   _Parent: {fileID: 1973130335}
   _pause: {fileID: 21680736}

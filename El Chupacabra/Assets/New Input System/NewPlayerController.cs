@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class NewPlayerController : MonoBehaviour
 {
+
+    [SerializeField] float RotateSpeed;
     [SerializeField] GameObject _gameObject;
     [SerializeField] GameObject _Parent;
     [SerializeField] PauseUI _pause;
@@ -85,6 +87,7 @@ public class NewPlayerController : MonoBehaviour
     }
     private void HandleMovement()
     {
+        
         if (!_isGrounded && CheckIfShouldMove() && !_inputHandler.DoubleJumpTriggered)
         {
             _moveDirection.y -= _gravity * Time.deltaTime;
@@ -133,6 +136,7 @@ public class NewPlayerController : MonoBehaviour
                 _moveDirection = transform.TransformDirection(_moveDirection);
                 _moveDirection *= _moveSpeed;
                 _oldMoveDirection = _moveDirection;
+                RotatePlayer();
                 _isJumping = false;
                 _isDoubleJumping = false;
             }
@@ -252,6 +256,19 @@ public class NewPlayerController : MonoBehaviour
     private void StopMovement()
     {
         _moveDirection = Vector3.zero;
+
+    }
+
+    private void RotatePlayer()
+    { 
+        Quaternion targetRotation = Quaternion.LookRotation(_moveDirection);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, RotateSpeed * Time.deltaTime);
+        /*  if (_inputHandler.MoveInput.y < 0.5f && _inputHandler.MoveInput.y > -0.5f)
+          transform.Rotate(0, _inputHandler.MoveInput.x * RotateSpeed, 0);
+          else if (_inputHandler.MoveInput.y > 0.5f)
+          { transform.Rotate(0, 0, 0); }
+          else if (_inputHandler.MoveInput.y < -0.5f)
+          { transform.Rotate(0, 180, 0); }*/
 
     }
     private void UpdateHP()
