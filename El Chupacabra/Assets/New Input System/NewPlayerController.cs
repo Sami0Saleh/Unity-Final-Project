@@ -147,7 +147,6 @@ public class NewPlayerController : MonoBehaviour
         /*   float mouseXRotation = _inputHandler.LookInput.x * _mouseSensitivitiy;
            verticalRotation -= _inputHandler.LookInput.y * mouseXRotation;
            verticalRotation = Mathf.Clamp(verticalRotation, -_upDownRange, _upDownRange);*/
-        Debug.Log(_inputHandler.LookInput);
         _mainCamera.m_XAxis.Value += _inputHandler.LookInput.x;
         _mainCamera.m_YAxis.Value += (_inputHandler.LookInput.y / 100);
     }
