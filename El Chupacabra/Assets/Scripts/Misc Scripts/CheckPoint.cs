@@ -24,7 +24,6 @@ public class CheckPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("CheckPoint");
             _redSign.enabled = false;
             _blueSign.enabled = true;
             UpdateRespawnPosition(other.transform);
