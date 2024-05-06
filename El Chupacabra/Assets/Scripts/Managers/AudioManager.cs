@@ -48,15 +48,3 @@ public class AudioManager : MonoBehaviour
         
     }
 }
-/*
-
-   public bool IsWalking
-   public bool IsJumping
-   public bool IsDoubleJumping
-   public bool IsGrounded
-   public bool IsHangingMB
-   public bool LeavingMB
-   public bool IsHangingEdge
-   public bool IsSpinAttacking
-   public bool IsDashing
-*/
