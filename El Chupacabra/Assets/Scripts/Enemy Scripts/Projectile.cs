@@ -13,18 +13,6 @@ public class Projectile : MonoBehaviour
     {
         GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
-    private void OnGameStateChanged(GameState newGameState)
-    {
-        enabled = newGameState == GameState.GamePlay;
-        if (newGameState == GameState.GamePlay)
-        {
-            Time.timeScale = 1;
-        }
-        else
-        {
-            Time.timeScale = 0;
-        }
-    }
     void Update()
     {
         transform.Translate(Vector3.forward * _speed * Time.deltaTime);
@@ -41,5 +29,17 @@ public class Projectile : MonoBehaviour
             }
         }
         Destroy(gameObject);
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
+        if (newGameState == GameState.GamePlay)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
     }
 }

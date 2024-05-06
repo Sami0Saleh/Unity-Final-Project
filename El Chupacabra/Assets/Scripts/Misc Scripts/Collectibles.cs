@@ -17,6 +17,14 @@ public class Collectibles : MonoBehaviour
 
     private bool _playerInCollectRange = false;
 
+    private void Awake()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
     void Start()
     {
         _playerController.MaxScore ++;
@@ -51,5 +59,17 @@ public class Collectibles : MonoBehaviour
         _playerController.Score ++;
         _playerController.UpdateScore();
         Destroy(gameObject);
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
+        if (newGameState == GameState.GamePlay)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
     }
 }

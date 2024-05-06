@@ -40,21 +40,6 @@ public class BaseEnemy : MonoBehaviour
     {
         GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
-    private void OnGameStateChanged(GameState newGameState)
-    {
-        enabled = newGameState == GameState.GamePlay;
-        if (newGameState == GameState.GamePlay) 
-        {
-            Time.timeScale = 1;
-            _animator.speed = 1;
-        }
-        else
-        {
-            Time.timeScale = 0;
-            _animator.speed = 0;
-        }
-    }
-
     private void Start()
     {
         _EnemyHealthPoint = _enemySO.startingHealth;
@@ -164,5 +149,19 @@ public class BaseEnemy : MonoBehaviour
     private void MeleeAttack()
     {
         _enemyAgent.velocity = Vector3.zero;
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
+        if (newGameState == GameState.GamePlay)
+        {
+            Time.timeScale = 1;
+            _animator.speed = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            _animator.speed = 0;
+        }
     }
 }
