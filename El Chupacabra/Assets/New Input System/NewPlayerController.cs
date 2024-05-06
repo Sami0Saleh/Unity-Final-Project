@@ -62,7 +62,7 @@ public class NewPlayerController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private CharacterController _characterController;
-    [SerializeField] CinemachineFreeLook _mainCamera;
+    [SerializeField] Transform _mainCameraTransform;
     [SerializeField] PlayerInputHandler _inputHandler;
 
     private Vector3 _currentMovement;
@@ -78,6 +78,7 @@ public class NewPlayerController : MonoBehaviour
     }
     private void Start()
     {
+        
         _inputHandler = PlayerInputHandler.Instance;
         _currentHp = _maxHp;
         UpdateHP();
@@ -87,7 +88,7 @@ public class NewPlayerController : MonoBehaviour
     private void Update()
     {
         HandleMovement();
-        HandleRotation();
+       // HandleRotation();
     }
     private void HandleMovement()
     {
@@ -137,7 +138,7 @@ public class NewPlayerController : MonoBehaviour
                 _moveDirection = transform.TransformDirection(_moveDirection);
                 _moveDirection *= _moveSpeed;
                 _oldMoveDirection = _moveDirection;
-                RotatePlayer();
+                HandleRotation();
                 _isJumping = false;
                 _isDoubleJumping = false;
             }
@@ -159,13 +160,18 @@ public class NewPlayerController : MonoBehaviour
     }
     private void HandleRotation() // need to make a third person with cinemacine
     {
-        /*   float mouseXRotation = _inputHandler.LookInput.x * _mouseSensitivitiy;
-           verticalRotation -= _inputHandler.LookInput.y * mouseXRotation;
-           verticalRotation = Mathf.Clamp(verticalRotation, -_upDownRange, _upDownRange);*/
-        _mainCamera.m_XAxis.Value += _inputHandler.LookInput.x;
-        _mainCamera.m_YAxis.Value += (_inputHandler.LookInput.y / 100);
+        if (_inputHandler.MoveInput.magnitude > 0)
+        {
+            float angle = Mathf.Atan2(_inputHandler.MoveInput.y, _inputHandler.MoveInput.x) * Mathf.Rad2Deg;
+
+            angle -= _mainCameraTransform.transform.eulerAngles.y * 2;
+            // Rotate the player towards the calculated angle
+            Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, RotateSpeed * Time.deltaTime);
+
+        }
     }
-    private bool CheckIfShouldMove() // checks if the player is hanging on edge or haning on monkey bar and stops him from entering diffrent ifs
+        private bool CheckIfShouldMove() // checks if the player is hanging on edge or haning on monkey bar and stops him from entering diffrent ifs
     {
         if (_isHangingEdge || _isHangingMB || _isDashing)
         {
@@ -257,18 +263,7 @@ public class NewPlayerController : MonoBehaviour
         _moveDirection = Vector3.zero;
 
     }
-    private void RotatePlayer()
-    { 
-        Quaternion targetRotation = Quaternion.LookRotation(_moveDirection);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, RotateSpeed * Time.deltaTime);
-        /*  if (_inputHandler.MoveInput.y < 0.5f && _inputHandler.MoveInput.y > -0.5f)
-          transform.Rotate(0, _inputHandler.MoveInput.x * RotateSpeed, 0);
-          else if (_inputHandler.MoveInput.y > 0.5f)
-          { transform.Rotate(0, 0, 0); }
-          else if (_inputHandler.MoveInput.y < -0.5f)
-          { transform.Rotate(0, 180, 0); }*/
 
-    }
     public void TakeDamage()
     {
         _currentHp --;
