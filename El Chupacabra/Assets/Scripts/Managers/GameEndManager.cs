@@ -15,7 +15,7 @@ public class GameEndManager : MonoBehaviour
         GameStateManager.Instance.SetState(GameState.Pause);
         AudioListener.pause = true;
 
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
     public void PlayerDead()
     {
@@ -27,6 +27,6 @@ public class GameEndManager : MonoBehaviour
         GameStateManager.Instance.SetState(GameState.Pause);
         AudioListener.pause = true;
 
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 }

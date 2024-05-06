@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 1160188280369213519, guid: 92b67b9012f6be64596f7942cb0e6368,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1471322045839867370, guid: 92b67b9012f6be64596f7942cb0e6368,
         type: 3}
@@ -239,17 +239,17 @@ PrefabInstance:
     - target: {fileID: 7910843227176047757, guid: 92b67b9012f6be64596f7942cb0e6368,
         type: 3}
       propertyPath: m_Name
-      value: Scene A Canvas
+      value: SceneLoader
       objectReference: {fileID: 0}
     - target: {fileID: 7910843227176047757, guid: 92b67b9012f6be64596f7942cb0e6368,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8301500191814232506, guid: 92b67b9012f6be64596f7942cb0e6368,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -263,6 +263,12 @@ PrefabInstance:
 --- !u!224 &2912910 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1471322045839867370, guid: 92b67b9012f6be64596f7942cb0e6368,
+    type: 3}
+  m_PrefabInstance: {fileID: 2912909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2912911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7910843227176047757, guid: 92b67b9012f6be64596f7942cb0e6368,
     type: 3}
   m_PrefabInstance: {fileID: 2912909}
   m_PrefabAsset: {fileID: 0}
@@ -1001,6 +1007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef57a74695497a94ebe8ac623a47f9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainMenu: {fileID: 255033647}
+  SceneLoader: {fileID: 2912911}
   _load: {fileID: 1188576038}
   _options: {fileID: 1452134603}
   _credits: {fileID: 466940008}
@@ -1706,10 +1714,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 255033648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000061035156, y: 0.0018615723}
-  m_SizeDelta: {x: 1920, y: 959.08}
+  m_SizeDelta: {x: 0, y: -8.919983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &687654539
 MonoBehaviour:

@@ -51,7 +51,7 @@ public class SceneLoader : MonoBehaviour
         if (!_userClickedOnSpin)
         {
             _userClickedOnSpin = true;
-            loadSceneAsyncOperation = SceneManager.LoadSceneAsync("Scene B");
+            loadSceneAsyncOperation = SceneManager.LoadSceneAsync("2");
             loadSceneAsyncOperation.allowSceneActivation = false;
             StartCoroutine(LoadAsyncScene());
         }

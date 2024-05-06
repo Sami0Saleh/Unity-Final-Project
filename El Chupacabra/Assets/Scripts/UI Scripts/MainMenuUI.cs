@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
+    [SerializeField] GameObject MainMenu;
+    [SerializeField] GameObject SceneLoader;
     [SerializeField] GameObject _load;
     [SerializeField] GameObject _options;
     [SerializeField] GameObject _credits;
     public void NewGameButton()
     {
+        MainMenu.SetActive(false);
+        SceneLoader.SetActive(true);
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(1);
     }
     public void LoadButton()
     {
