@@ -7,8 +7,12 @@ using UnityEngine.EventSystems;
 
 public class NewPlayerController : MonoBehaviour
 {
-
-    [SerializeField] float RotateSpeed;
+    [Header("References")]
+    [SerializeField] private CharacterController _characterController;
+    [SerializeField] private CinemachineBrain _brain;
+    [SerializeField] private CinemachineFreeLook _freelookCamera;
+    [SerializeField] Transform _mainCameraTransform;
+    [SerializeField] PlayerInputHandler _inputHandler;
     [SerializeField] GameObject _gameObject;
     [SerializeField] GameObject _Parent;
     [SerializeField] PauseUI _pause;
@@ -29,6 +33,8 @@ public class NewPlayerController : MonoBehaviour
     private float _edgeHangOffset = 0.5f;
     private float _dashSpeed = 10f;
     private float _dashDistance = 5f;
+    private float RotateSpeed = 1;
+
 
     [SerializeField] int _maxHp = 3;
     [SerializeField] int _currentHp;
@@ -58,23 +64,8 @@ public class NewPlayerController : MonoBehaviour
     private float _jumpForce = 5.0f;
     private float _gravity = 9.81f;
 
-    [Header("Look Sensitivity")]
-    private float _mouseSensitivitiy = 2.0f;
-    private float _upDownRange = 80.0f;
-
-    [Header("References")]
-    [SerializeField] private CharacterController _characterController;
-    [SerializeField] private CinemachineBrain _brain;
-    [SerializeField] private CinemachineFreeLook _freelookCamera;
-    [SerializeField] Transform _mainCameraTransform;
-    [SerializeField] PlayerInputHandler _inputHandler;
-
-    private Vector3 _currentMovement;
-    private float verticalRotation;
-
     private void Awake()
-    {
-        
+    { 
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     private void OnDestroy()
@@ -92,7 +83,6 @@ public class NewPlayerController : MonoBehaviour
     private void Update()
     {
         HandleMovement();
-       // HandleRotation();
     }
     private void HandleMovement()
     {
