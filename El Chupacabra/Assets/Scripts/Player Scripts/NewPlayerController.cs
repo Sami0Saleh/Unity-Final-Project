@@ -62,6 +62,7 @@ public class NewPlayerController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private CharacterController _characterController;
+    [SerializeField] private CinemachineBrain _brain;
     [SerializeField] private CinemachineFreeLook _freelookCamera;
     [SerializeField] Transform _mainCameraTransform;
     [SerializeField] PlayerInputHandler _inputHandler;
@@ -71,7 +72,7 @@ public class NewPlayerController : MonoBehaviour
 
     private void Awake()
     {
-        _freelookCamera.MoveToTopOfPrioritySubqueue();
+        
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     private void OnDestroy()
@@ -80,7 +81,6 @@ public class NewPlayerController : MonoBehaviour
     }
     private void Start()
     {
-        
         _inputHandler = PlayerInputHandler.Instance;
         _currentHp = _maxHp;
         UpdateHP();

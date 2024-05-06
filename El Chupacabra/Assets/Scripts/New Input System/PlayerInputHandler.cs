@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Input Action Asset")]
-    [SerializeField] private InputActionAsset _playerControls;
+    [SerializeField] public InputActionAsset _playerControls;
 
     [Header("Action Map Name References")]
     [SerializeField] private string _actionMapName = "PlayerActionMap";
