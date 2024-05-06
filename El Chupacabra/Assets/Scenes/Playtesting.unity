@@ -7543,7 +7543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658093168}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.014216615, y: 0.39520276, z: -0.006117221, w: 0.9184636}
+  m_LocalRotation: {x: 0.047570374, y: 0.39471975, z: -0.020468904, w: 0.917341}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10368,7 +10368,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0af539c19766a41a05a222b052678b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0
+  _characterController: {fileID: 7378642632881554801}
+  _brain: {fileID: 1658093169}
+  _freelookCamera: {fileID: 810065950}
+  _mainCameraTransform: {fileID: 1658093173}
+  _inputHandler: {fileID: 709135838}
   _gameObject: {fileID: 2097729223}
   _Parent: {fileID: 1973130335}
   _pause: {fileID: 21680736}
@@ -10392,11 +10396,6 @@ MonoBehaviour:
   _isHangingEdge: 0
   _leavingMB: 0
   _isPaused: 0
-  _characterController: {fileID: 7378642632881554801}
-  _brain: {fileID: 1658093169}
-  _freelookCamera: {fileID: 810065950}
-  _mainCameraTransform: {fileID: 1658093173}
-  _inputHandler: {fileID: 709135838}
 --- !u!143 &7378642632881554801
 CharacterController:
   m_ObjectHideFlags: 0
