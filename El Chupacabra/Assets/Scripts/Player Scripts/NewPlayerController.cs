@@ -62,6 +62,7 @@ public class NewPlayerController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private CharacterController _characterController;
+    [SerializeField] private CinemachineFreeLook _freelookCamera;
     [SerializeField] Transform _mainCameraTransform;
     [SerializeField] PlayerInputHandler _inputHandler;
 
@@ -70,6 +71,7 @@ public class NewPlayerController : MonoBehaviour
 
     private void Awake()
     {
+        _freelookCamera.MoveToTopOfPrioritySubqueue();
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     private void OnDestroy()
@@ -115,7 +117,7 @@ public class NewPlayerController : MonoBehaviour
         else if (_inputHandler.SpinTriggered)
         {
             _isSpinAttack = true;
-            Invoke("CancelSpin", 2);
+            Invoke("CancelSpin", 1);
         }
         else if (_isHangingEdge)
         {
