@@ -16,9 +16,9 @@ public class AnimatorManager : MonoBehaviour
     void Update()
     {
         if (_PContro.IsSpinAttacking)
-        { TriggerAttack("Spin"); Debug.Log("Spin Anim"); }
+        { TriggerAttack("Spin"); }
         if (_PContro.IsDashing)
-        { TriggerAttack("Dash"); Debug.Log("Dash Anim"); }
+        { TriggerAttack("Dash"); }
 
         // move right
         /* if (!_edgeMovement && Input.GetKeyDown(KeyCode.D))
@@ -45,17 +45,17 @@ public class AnimatorManager : MonoBehaviour
          }*/
 
         if (_PContro.IsWalking)
-        { TriggerWalkAnim(true); Debug.Log("Walking Anim"); }
+        { TriggerWalkAnim(true); }
         if (!_PContro.IsWalking)
         { TriggerWalkAnim(false); }
 
         if (_PContro.IsJumping)
-        { TriggerJumpAnim(true); Debug.Log("Should Jump"); }
+        { TriggerJumpAnim(true); }
         else if (!_PContro.IsJumping)
         { TriggerJumpAnim(false); }
         if (_PContro.IsDoubleJumping)
         {
-            TriggerDoubleJumpAnim(true); Debug.Log("Should Double Jump");
+            TriggerDoubleJumpAnim(true);
         }
         else if (!_PContro.IsDoubleJumping)
         {

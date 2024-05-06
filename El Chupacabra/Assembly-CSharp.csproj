@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\UI Scripts\PauseUI.cs" />
     <Compile Include="Assets\Scripts\SaveNLoadJson.cs" />
     <Compile Include="Assets\Scripts\Game State\GameStateManager.cs" />
+    <Compile Include="Assets\Scripts\Collectibles.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\LoadUI.cs" />
     <Compile Include="Assets\Imported Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />

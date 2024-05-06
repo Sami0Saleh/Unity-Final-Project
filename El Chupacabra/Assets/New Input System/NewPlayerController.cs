@@ -13,6 +13,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] GameObject _Parent;
     [SerializeField] PauseUI _pause;
     [SerializeField] UIManager _uiManager;
+    [SerializeField] GameEndManager _gameEndManager;
 
     // Private Variables 
     private Vector3 _moveDirection = Vector3.zero;
@@ -30,7 +31,10 @@ public class NewPlayerController : MonoBehaviour
 
     [SerializeField] int _maxHp = 3;
     [SerializeField] int _currentHp;
+    [SerializeField] int _maxScore = 0;
     [SerializeField] int _score = 0;
+    [SerializeField] int _maxEnemyCount = 0;
+    [SerializeField] int _enemyCount = 0;
 
     [SerializeField] bool _isWalking;
     [SerializeField] bool _isJumping = false;
@@ -76,10 +80,11 @@ public class NewPlayerController : MonoBehaviour
     {
         _inputHandler = PlayerInputHandler.Instance;
         _currentHp = _maxHp;
+        _enemyCount = _maxEnemyCount;
         UpdateHP();
         UpdateScore();
+        UpdateEnemyCount();
     }
-
     private void Update()
     {
         HandleMovement();
@@ -96,12 +101,10 @@ public class NewPlayerController : MonoBehaviour
         else if (_isGrounded && !_isJumping && !_isDoubleJumping && _inputHandler.JumpTriggered)
         {
             Jump();
-            Debug.Log("First Jump");
         }
         else if (_isFalling && !_isDoubleJumping && _inputHandler.DoubleJumpTriggered)
         {
             DoubleJump();
-            Debug.Log("Second jump");
         }
         else if (!_isDashing && _inputHandler.DashTriggered)
         {
@@ -122,7 +125,6 @@ public class NewPlayerController : MonoBehaviour
         }
         else if (_isHangingMB && _inputHandler.JumpTriggered)
         {
-            Debug.Log("let me out");
             _leavingMB = true;
             LeavingMonkeyBar();
         }
@@ -151,9 +153,11 @@ public class NewPlayerController : MonoBehaviour
         {
             _pause.PauseGame();
         }
-
+        if (_enemyCount == 0 && _score == _maxScore)
+        {
+            _gameEndManager.GameWon();
+        }
     }
-
     private void HandleRotation() // need to make a third person with cinemacine
     {
         /*   float mouseXRotation = _inputHandler.LookInput.x * _mouseSensitivitiy;
@@ -170,7 +174,6 @@ public class NewPlayerController : MonoBehaviour
         }
         else return true;
     }
-
     private void Jump()
     {
         _isWalking = false;
@@ -186,7 +189,6 @@ public class NewPlayerController : MonoBehaviour
         _isJumping = false;
         _isGrounded = false;
     }
-
     private void HangingEdge(Transform hit)
     {
         _isGrounded = false;
@@ -195,7 +197,6 @@ public class NewPlayerController : MonoBehaviour
         _gameObject.transform.localPosition = Vector3.zero;
 
     }
-
     private void HangOnEdge()
     {
 
@@ -203,7 +204,6 @@ public class NewPlayerController : MonoBehaviour
         _characterController.Move(lateralMovement * Time.deltaTime);
         if (_inputHandler.JumpTriggered)
         {
-            Debug.Log("let Go from Edge");
             _moveDirection = transform.forward * _jumpHeight;
             _moveDirection.y = _jumpHeight;
             _moveDirection.z = transform.forward.z;
@@ -258,7 +258,6 @@ public class NewPlayerController : MonoBehaviour
         _moveDirection = Vector3.zero;
 
     }
-
     private void RotatePlayer()
     { 
         Quaternion targetRotation = Quaternion.LookRotation(_moveDirection);
@@ -271,13 +270,30 @@ public class NewPlayerController : MonoBehaviour
           { transform.Rotate(0, 180, 0); }*/
 
     }
-    private void UpdateHP()
+    public void TakeDamage()
+    {
+        _currentHp --;
+        UpdateHP();
+        if (_currentHp == 0)
+        {
+            Die();
+        }
+    }
+    private void Die()
+    {
+        _gameEndManager.PlayerDead();
+    }
+    public void UpdateHP()
     {
         _uiManager.UpdateHP(_maxHp, _currentHp);
     }
+    public void UpdateEnemyCount()
+    {
+        _uiManager.UpdateEnemy(_maxEnemyCount, _enemyCount);
+    }
     public void UpdateScore()
     {
-        _uiManager.UpdateScore(_score);
+        _uiManager.UpdateScore(_maxScore , _score);
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -289,7 +305,6 @@ public class NewPlayerController : MonoBehaviour
         }
         if (hit.gameObject.CompareTag("monkeyBar"))
         {
-            Debug.Log("Hanging on monkey Bar");
             OnMonkeyBar(hit.transform);
             _isHangingMB = true;
 
@@ -298,6 +313,19 @@ public class NewPlayerController : MonoBehaviour
         {
             _isGrounded = true;
             _isFalling = false;
+        }
+        if (hit.gameObject.CompareTag("damage"))
+        {
+            TakeDamage();
+        }
+        if (hit.gameObject.CompareTag("enemy") && _isSpinAttack)
+        {
+            Debug.Log("Hit hit");
+            BaseEnemy enemy = hit.gameObject.GetComponent<BaseEnemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage();
+            }
         }
     }
 
@@ -329,7 +357,6 @@ public class NewPlayerController : MonoBehaviour
         get { return _isDoubleJumping; }
         set { _isDoubleJumping = value; }
     }
-
     public bool IsGrounded
     {
         get { return _isGrounded; }
@@ -360,7 +387,25 @@ public class NewPlayerController : MonoBehaviour
         get { return _isDashing; }
         set { _isDashing = value; }
     }
-
-
+    public int MaxScore
+    {
+        get { return _maxScore; }
+        set { _maxScore = value; }
+    }
+    public int Score
+    {
+        get { return _score; }
+        set { _score = value; }
+    }
+    public int MaxEnemyCount
+    {
+        get { return _maxEnemyCount; }
+        set { _maxEnemyCount = value; }
+    }
+    public int EnemyCount
+    {
+        get { return _enemyCount; }
+        set { _enemyCount = value; }
+    }
 
 }
