@@ -954,6 +954,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giant Enemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1443250587587990952, guid: 2d00ddc6161754441ab9e360e4f28b3e,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4414515820395059622, guid: 2d00ddc6161754441ab9e360e4f28b3e,
         type: 3}
       propertyPath: m_TagString
@@ -966,13 +971,28 @@ PrefabInstance:
       objectReference: {fileID: 7378642632881554799}
     - target: {fileID: 4499147119407428104, guid: 2d00ddc6161754441ab9e360e4f28b3e,
         type: 3}
+      propertyPath: _attackRange
+      value: 1.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499147119407428104, guid: 2d00ddc6161754441ab9e360e4f28b3e,
+        type: 3}
       propertyPath: _playerController
       value: 
       objectReference: {fileID: 7378642632881554800}
+    - target: {fileID: 6601741618068676877, guid: 2d00ddc6161754441ab9e360e4f28b3e,
+        type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 7424727638081540601, guid: 2d00ddc6161754441ab9e360e4f28b3e,
         type: 3}
       propertyPath: m_TagString
       value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028561988626325017, guid: 2d00ddc6161754441ab9e360e4f28b3e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.64
       objectReference: {fileID: 0}
     - target: {fileID: 9028561988626325017, guid: 2d00ddc6161754441ab9e360e4f28b3e,
         type: 3}
@@ -981,13 +1001,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9028561988626325017, guid: 2d00ddc6161754441ab9e360e4f28b3e,
         type: 3}
+      propertyPath: m_Center.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028561988626325017, guid: 2d00ddc6161754441ab9e360e4f28b3e,
+        type: 3}
       propertyPath: m_Center.z
-      value: 0.20443296
+      value: -0.36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6601741618068676877, guid: 2d00ddc6161754441ab9e360e4f28b3e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 182953668}
   m_SourcePrefab: {fileID: 100100000, guid: 2d00ddc6161754441ab9e360e4f28b3e, type: 3}
 --- !u!1001 &172402269
 PrefabInstance:
@@ -1046,6 +1075,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce4192f2b3cb01b4ea33251fa9ea76ed, type: 3}
+--- !u!1 &182953666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6601741618068676877, guid: 2d00ddc6161754441ab9e360e4f28b3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 147284804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &182953668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182953666}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.22, y: 0, z: 0}
 --- !u!1 &202988079
 GameObject:
   m_ObjectHideFlags: 0

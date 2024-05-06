@@ -255,7 +255,7 @@ public class NewPlayerController : MonoBehaviour
             OnMonkeyBar(hit.transform);
             _isHangingMB = true;
         }
-        if (hit.gameObject.CompareTag("damage"))
+        if (hit.gameObject.CompareTag("damage") && !_isDashing && !_isSpinAttack)
         {
             TakeDamage();
         }
