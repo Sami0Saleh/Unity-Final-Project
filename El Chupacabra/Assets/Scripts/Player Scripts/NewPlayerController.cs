@@ -54,6 +54,8 @@ public class NewPlayerController : MonoBehaviour
     private void Awake()
     { 
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+        GameStateManager.Instance.SetState(GameState.GamePlay);
+
     }
     private void OnDestroy()
     {

@@ -10153,6 +10153,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2559093359309205470, guid: 08057a7b90ef90042abb91d5fc6684a2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3727271254515451028, guid: 08057a7b90ef90042abb91d5fc6684a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11710,6 +11715,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2559093359309205470, guid: 08057a7b90ef90042abb91d5fc6684a2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3727271254515451028, guid: 08057a7b90ef90042abb91d5fc6684a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11936,6 +11946,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2559093359309205470, guid: 08057a7b90ef90042abb91d5fc6684a2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3727271254515451028, guid: 08057a7b90ef90042abb91d5fc6684a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12366,7 +12381,7 @@ PrefabInstance:
     - target: {fileID: 2834724909442587970, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
       propertyPath: m_TagString
-      value: player
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4412960428680194998, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
