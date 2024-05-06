@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\player scripts\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player scripts\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\comicartui\\script\\ui\\shapes\\gradientshapeanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\comicartui\\script\\ui\\shapes\\gradientshapeanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\comicartui\\script\\ui\\shapes\\stripesshapeanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\comicartui\\script\\ui\\shapes\\stripesshapeanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\comicartui\\script\\ui\\shapes\\stripesshapeanim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NewPlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
+              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAwEsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T07:53:54.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GradientShapeAnim.cs",
               "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\ComicArtUI\\Script\\UI\\Shapes\\GradientShapeAnim.cs",
               "RelativeDocumentMoniker": "Assets\\ComicArtUI\\Script\\UI\\Shapes\\GradientShapeAnim.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "StripesShapeAnim.cs",
               "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\ComicArtUI\\Script\\UI\\Shapes\\StripesShapeAnim.cs",
               "RelativeDocumentMoniker": "Assets\\ComicArtUI\\Script\\UI\\Shapes\\StripesShapeAnim.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "Assets\\ComicArtUI\\Script\\UI\\Shapes\\StripesShapeAnim.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T03:18:09.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T03:18:09.418Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ShapesAnim.cs",
               "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\ComicArtUI\\Script\\UI\\Shapes\\ShapesAnim.cs",
               "RelativeDocumentMoniker": "Assets\\ComicArtUI\\Script\\UI\\Shapes\\ShapesAnim.cs",
