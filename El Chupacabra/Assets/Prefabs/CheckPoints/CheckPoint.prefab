@@ -40,10 +40,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3727271254515451028}
     m_Modifications:
+    - target: {fileID: 393860141798044812, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2110943281295425616, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4802263753046169304, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f,
         type: 3}
@@ -134,9 +139,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6904344192092517927}
   m_SourcePrefab: {fileID: 100100000, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f, type: 3}
---- !u!1 &1227100415774979326 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2110943281295425616, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f,
+--- !u!23 &665230231989272610 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 393860141798044812, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f,
     type: 3}
   m_PrefabInstance: {fileID: 886112815865984174}
   m_PrefabAsset: {fileID: 0}
@@ -146,9 +151,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 886112815865984174}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7912494066757163776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7026399951331438510, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f,
+--- !u!23 &8498861368720519132 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8772483808331864946, guid: ea4a3e3ba7c6d694d84c84b4e28c9b6f,
     type: 3}
   m_PrefabInstance: {fileID: 886112815865984174}
   m_PrefabAsset: {fileID: 0}
@@ -193,6 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8bf662f2082c8f46975c5c659cb8d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _redSign: {fileID: 7912494066757163776}
-  _blueSign: {fileID: 1227100415774979326}
+  _redSign: {fileID: 8498861368720519132}
+  _blueSign: {fileID: 665230231989272610}
   _saveRef: {fileID: 0}

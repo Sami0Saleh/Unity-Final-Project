@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3450,7 +3450,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 202988080}
         m_TargetAssemblyTypeName: PauseUI, Assembly-CSharp
-        m_MethodName: ContinueButton
+        m_MethodName: ContinueGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12255,7 +12255,7 @@ PrefabInstance:
     - target: {fileID: 1746367312251623841, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 1746367312251623841, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
@@ -12297,10 +12297,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2735210099395552008, guid: 228de878f7855184ea75b576a1739de1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.04
+      objectReference: {fileID: 0}
     - target: {fileID: 2834724909442587970, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
       propertyPath: m_Name
       value: El Chupacabra
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834724909442587970, guid: 228de878f7855184ea75b576a1739de1,
+        type: 3}
+      propertyPath: m_TagString
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 4412960428680194998, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
@@ -12314,9 +12324,19 @@ PrefabInstance:
       objectReference: {fileID: 1973130335}
     - target: {fileID: 4412960428680194998, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
+      propertyPath: _isFalling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412960428680194998, guid: 228de878f7855184ea75b576a1739de1,
+        type: 3}
       propertyPath: _uiManager
       value: 
       objectReference: {fileID: 845020852}
+    - target: {fileID: 4412960428680194998, guid: 228de878f7855184ea75b576a1739de1,
+        type: 3}
+      propertyPath: _isGrounded
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4412960428680194998, guid: 228de878f7855184ea75b576a1739de1,
         type: 3}
       propertyPath: _inputHandler

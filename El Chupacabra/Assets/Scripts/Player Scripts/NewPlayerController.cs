@@ -232,10 +232,13 @@ public class NewPlayerController : MonoBehaviour
         enabled = newGameState == GameState.GamePlay;
         if (newGameState == GameState.GamePlay)
         {
+            Cursor.lockState = CursorLockMode.Locked;
             _animator.speed = 1;
         }
         else
         {
+            Cursor.lockState = CursorLockMode.None;
+
             _animator.speed = 0;
         }
     }
@@ -251,16 +254,15 @@ public class NewPlayerController : MonoBehaviour
         {
             OnMonkeyBar(hit.transform);
             _isHangingMB = true;
-
+        }
+        if (hit.gameObject.CompareTag("damage"))
+        {
+            TakeDamage();
         }
         if (hit.gameObject.CompareTag("ground"))
         {
             _isGrounded = true;
             _isFalling = false;
-        }
-        if (hit.gameObject.CompareTag("damage"))
-        {
-            TakeDamage();
         }
         if (hit.gameObject.CompareTag("enemy") && _isSpinAttack)
         {
@@ -359,6 +361,12 @@ public class NewPlayerController : MonoBehaviour
     {
         get { return _isPaused; }
         set { _isPaused = value; }
+    }
+
+    public bool IsFalling
+    {
+        get { return _isFalling; }
+        set { _isFalling = value; }
     }
 
     private void HangingEdge(Transform hit)

@@ -18,6 +18,11 @@ public class SceneLoader : MonoBehaviour
     private bool _userClickedOnSpin = false;
     private bool _userClickedOK = false;
     private bool _canStartNextScene = false;
+
+    private void Awake()
+    {
+        Debug.Log("ive been started");
+    }
     private void Update()
     {
         if (_userClickedOK)
@@ -51,7 +56,7 @@ public class SceneLoader : MonoBehaviour
         if (!_userClickedOnSpin)
         {
             _userClickedOnSpin = true;
-            loadSceneAsyncOperation = SceneManager.LoadSceneAsync("2");
+            loadSceneAsyncOperation = SceneManager.LoadSceneAsync(1);
             loadSceneAsyncOperation.allowSceneActivation = false;
             StartCoroutine(LoadAsyncScene());
         }

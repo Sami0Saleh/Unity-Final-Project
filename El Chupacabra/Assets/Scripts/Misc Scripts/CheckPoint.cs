@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    [SerializeField] GameObject _redSign;
-    [SerializeField] GameObject _blueSign;
+    [SerializeField] MeshRenderer _redSign;
+    [SerializeField] MeshRenderer _blueSign;
     [SerializeField] SaveNLoadJson _saveRef;
     private Vector3 _respawnPosition;
-
-    private void Start()
-    {
-        Debug.Log("It's Alive");
-    }
     private void UpdateRespawnPosition(Transform checkpoint)
     {
         _saveRef.CheckPointPos = checkpoint.transform.position;
@@ -27,12 +22,13 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "player")
         {
             Debug.Log("CheckPoint");
+            _redSign.enabled = false;
+            _blueSign.enabled = true;
             UpdateRespawnPosition(other.transform);
-            _redSign.SetActive(true);
-            _blueSign.SetActive(false);
+            
         }
     }
     
