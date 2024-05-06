@@ -14,6 +14,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip Music_Welcome;
     [SerializeField] AudioClip Music_GameOver;
     [SerializeField] AudioClip Music_Deloop;
+    [SerializeField] AudioClip Music_Victory;
+    [SerializeField] AudioClip Music_Marichis_1;
+    [SerializeField] AudioClip Music_Marichis_2;
     //
     [SerializeField] AudioClip CollectedGem;
     [SerializeField] AudioClip PlayerWalkingSound;

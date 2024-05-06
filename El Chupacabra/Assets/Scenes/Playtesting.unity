@@ -160,6 +160,9 @@ MonoBehaviour:
   Music_Welcome: {fileID: 8300000, guid: 7221053580fcded4f932a27985ee71d4, type: 3}
   Music_GameOver: {fileID: 8300000, guid: b44a7229a6b496641939c4822fd9a669, type: 3}
   Music_Deloop: {fileID: 8300000, guid: 6492e99e6f44e724caf05fbe6a99d446, type: 3}
+  Music_Victory: {fileID: 8300000, guid: 7aea575d45d90354e8d8c7c4e907a290, type: 3}
+  Music_Marichis_1: {fileID: 8300000, guid: 2048fdd8d836962429a29c12cd1ac2d1, type: 3}
+  Music_Marichis_2: {fileID: 8300000, guid: 6315532fd592c5f40ba9ae9beb2713cb, type: 3}
   CollectedGem: {fileID: 8300000, guid: d58e5d630eff358409aa5343d0512838, type: 3}
   PlayerWalkingSound: {fileID: 8300000, guid: 0f47d8001f1c18241a097901d174c1e6, type: 3}
   JumpSound: {fileID: 8300000, guid: 6aeaf1caad4ccd04482f3382cfabb50f, type: 3}
