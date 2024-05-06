@@ -1,23 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Collectibles : MonoBehaviour
 {
     [SerializeField] NewPlayerController _playerController;
-    [SerializeField] GameObject collectEffect;
-    [SerializeField] float rotationSpeed;
+    [SerializeField] Transform _playerTransform;
+    [SerializeField] GameObject _collectEffect;
 
-    // Use this for initialization
+    [SerializeField] LayerMask _playerLayer;
+
+    [SerializeField] float _rotationSpeed;
+    [SerializeField] float _speed;
+    [SerializeField] float _collectRange;
+
+    private bool _playerInCollectRange = false;
+
     void Start()
     {
         _playerController.MaxScore ++;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
+        Movement();
     }
 
     void OnTriggerEnter(Collider other)
@@ -28,10 +34,20 @@ public class Collectibles : MonoBehaviour
         }
     }
 
+    public void Movement()
+    {
+        transform.Rotate(Vector3.up * _rotationSpeed * Time.deltaTime, Space.World);
+        _playerInCollectRange = Physics.CheckSphere(transform.position, _collectRange, _playerLayer);
+        if (_playerInCollectRange)
+        {
+            transform.LookAt(_playerTransform);
+            transform.Translate(Vector3.forward * _speed * Time.deltaTime);
+        }
+    }
     public void Collect()
     {
-        if (collectEffect)
-            Instantiate(collectEffect, transform.position, Quaternion.identity);
+        if (_collectEffect)
+            Instantiate(_collectEffect, transform.position, Quaternion.identity);
         _playerController.Score ++;
         _playerController.UpdateScore();
         Destroy(gameObject);

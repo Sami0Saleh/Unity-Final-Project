@@ -80,7 +80,6 @@ public class NewPlayerController : MonoBehaviour
     {
         _inputHandler = PlayerInputHandler.Instance;
         _currentHp = _maxHp;
-        _enemyCount = _maxEnemyCount;
         UpdateHP();
         UpdateScore();
         UpdateEnemyCount();
@@ -153,7 +152,7 @@ public class NewPlayerController : MonoBehaviour
         {
             _pause.PauseGame();
         }
-        if (_enemyCount == 0 && _score == _maxScore)
+        if (_enemyCount == _maxEnemyCount && _score == _maxScore)
         {
             _gameEndManager.GameWon();
         }
@@ -320,7 +319,14 @@ public class NewPlayerController : MonoBehaviour
         }
         if (hit.gameObject.CompareTag("enemy") && _isSpinAttack)
         {
-            Debug.Log("Hit hit");
+            BaseEnemy enemy = hit.gameObject.GetComponent<BaseEnemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage();
+            }
+        }
+        if (hit.gameObject.CompareTag("enemy") && _isDashing)
+        {
             BaseEnemy enemy = hit.gameObject.GetComponent<BaseEnemy>();
             if (enemy != null)
             {

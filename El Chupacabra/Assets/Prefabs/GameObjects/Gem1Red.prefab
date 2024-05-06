@@ -98,9 +98,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 0}
-  collectEffect: {fileID: 1702657300312902, guid: eb0558ca75ad4f44ca5b503f1c10ccb4,
+  _playerTransform: {fileID: 0}
+  _collectEffect: {fileID: 1702657300312902, guid: eb0558ca75ad4f44ca5b503f1c10ccb4,
     type: 3}
-  rotationSpeed: 15
+  _playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  _rotationSpeed: 10
+  _speed: 8
+  _collectRange: 5
 --- !u!135 &135105989565161994
 SphereCollider:
   m_ObjectHideFlags: 0

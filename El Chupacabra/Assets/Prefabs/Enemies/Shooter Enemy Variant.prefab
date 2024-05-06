@@ -125,6 +125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongRange Cactus
       objectReference: {fileID: 0}
+    - target: {fileID: 8788173875354196848, guid: c892ebbb59e99eb4db60e251fe4d3f28,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -181,8 +186,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9194245, y: 1.6912119, z: 1}
-  m_Center: {x: 0.023756951, y: 0.89413047, z: 0}
+  m_Size: {x: 2.1601005, y: 2.5821538, z: 1.8225822}
+  m_Center: {x: 0.0015230179, y: 1.3396013, z: -0.017515182}
 --- !u!1001 &1234551806300345641
 PrefabInstance:
   m_ObjectHideFlags: 0

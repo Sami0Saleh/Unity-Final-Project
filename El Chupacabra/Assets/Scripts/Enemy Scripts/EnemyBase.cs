@@ -131,7 +131,7 @@ public class BaseEnemy : MonoBehaviour
         _EnemyHealthPoint--;
         if (_EnemyHealthPoint == 0)
         {
-            _playerController.EnemyCount --;
+            _playerController.EnemyCount ++;
             _playerController.UpdateEnemyCount();
             Destroy(gameObject);
         }
