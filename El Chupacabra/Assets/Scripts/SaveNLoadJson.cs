@@ -11,7 +11,7 @@ public class SaveNLoadJson : MonoBehaviour
     private SerializedSaveGame _serializedSaveGame;
     [SerializeField] NewPlayerController _playerController;
     [SerializeField] Transform _playerTransform;
-    
+    [SerializeField] public Vector3 CheckPointPos;
     public void SaveGame()
     {
         _serializedSaveGame = new SerializedSaveGame();
@@ -22,7 +22,7 @@ public class SaveNLoadJson : MonoBehaviour
         _serializedSaveGame.maxEnemyCount = _playerController.MaxEnemyCount;
         _serializedSaveGame.enemyCount = _playerController.EnemyCount;
         _serializedSaveGame.playerPosition = _playerTransform.position;
-        //_serializedSaveGame.playerCheckpoint = GetCurrentPlayerCheckpoint();
+        _serializedSaveGame.lastCheckpointPosition = CheckPointPos;
 
         // Gather enemy data
         _serializedSaveGame.enemyPositions = GetAllEnemyPositions();
@@ -36,6 +36,7 @@ public class SaveNLoadJson : MonoBehaviour
     }
     public void LoadGame()
     {
+        _playerController.CurrentHp = _serializedSaveGame.playerHP;
         LoadFromJson();
     }
     public void SaveToJson()

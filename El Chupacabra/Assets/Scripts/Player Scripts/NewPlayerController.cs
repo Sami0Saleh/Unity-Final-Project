@@ -386,10 +386,12 @@ public class NewPlayerController : MonoBehaviour
     public int MaxHp
     {
         get { return _maxHp; }
+        set { _maxHp = value; }
     }
     public int CurrentHp
     {
         get { return _currentHp; }
+        set { _currentHp = value; }
     }
     public int MaxScore
     {
