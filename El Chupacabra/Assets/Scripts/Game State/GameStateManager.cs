@@ -24,10 +24,8 @@ public class GameStateManager
     public void SetState(GameState newGameState)
     {
         if (newGameState == CurrentGameState)
-            return;
-
+        { return; }
         CurrentGameState = newGameState;
         OnGameStateChanged?.Invoke(newGameState);
-
     }
 }

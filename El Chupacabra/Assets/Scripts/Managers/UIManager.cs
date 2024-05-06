@@ -5,20 +5,19 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI playerHPText;
-    [SerializeField] TextMeshProUGUI playerScoreText;
-    [SerializeField] TextMeshProUGUI EnemyCountText;
-
+    [SerializeField] TextMeshProUGUI _playerHPText;
+    [SerializeField] TextMeshProUGUI _playerScoreText;
+    [SerializeField] TextMeshProUGUI _EnemyCountText;
     public void UpdateHP(int newMaxHP , int newCurrentHP)
     {
-        playerHPText.text = newCurrentHP.ToString() + " / " + newMaxHP.ToString();
+        _playerHPText.text = newCurrentHP.ToString() + " / " + newMaxHP.ToString();
     }
     public void UpdateScore(int newMaxScore , int newScore)
     {
-        playerScoreText.text = newScore.ToString() + " / " + newMaxScore.ToString();
+        _playerScoreText.text = newScore.ToString() + " / " + newMaxScore.ToString();
     }
     public void UpdateEnemy(int newMaxEnemy, int newEnemy)
     {
-        EnemyCountText.text = newEnemy.ToString() + " / " + newMaxEnemy.ToString();
+        _EnemyCountText.text = newEnemy.ToString() + " / " + newMaxEnemy.ToString();
     }
 }

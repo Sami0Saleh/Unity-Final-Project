@@ -7,7 +7,6 @@ public class Projectile : MonoBehaviour
     [SerializeField] float _speed;
     private void Awake()
     {
-
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     private void OnDestroy()

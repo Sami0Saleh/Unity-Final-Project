@@ -9,9 +9,7 @@ public class NewPlayerController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private CharacterController _characterController;
-    [SerializeField] private CinemachineBrain _brain;
-    [SerializeField] private CinemachineFreeLook _freelookCamera;
-    [SerializeField] Transform _mainCameraTransform;
+    //[SerializeField] Transform _mainCameraTransform;
     [SerializeField] PlayerInputHandler _inputHandler;
     [SerializeField] GameObject _gameObject;
     [SerializeField] GameObject _Parent;
@@ -27,13 +25,9 @@ public class NewPlayerController : MonoBehaviour
 
     private float _moveSpeed = 10f;
     private float _jumpHeight = 5.0f;
-
-    private float _edgeMovementSpeed = 5f;
-    private float _edgeDetectionDistance = 20f;
-    private float _edgeHangOffset = 0.5f;
     private float _dashSpeed = 10f;
     private float _dashDistance = 5f;
-    private float RotateSpeed = 1;
+    private float RotateSpeed = 3;
 
 
     [SerializeField] int _maxHp = 3;
@@ -51,18 +45,11 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] bool _isFalling = false;
     [SerializeField] bool _isSpinAttack = false;
 
-    [SerializeField] bool _isHangingMB = false;
-    [SerializeField] bool _isHangingEdge = false;
-    [SerializeField] bool _leavingMB = false;
+    [SerializeField] bool _leavingMB;
+    [SerializeField] bool _isHangingEdge;
+    [SerializeField] bool _isHangingMB;
     [SerializeField] bool _isPaused = false;
-
-    [Header("Movement Speeds")]
-    private float _walkSpeed = 3.0f;
-    private float _sprintMultiplier = 2.0f;
-
-    [Header("Jump Parameters")]
-    private float _jumpForce = 5.0f;
-    private float _gravity = 9.81f;
+    [SerializeField] float _gravity = 9.81f;
 
     private void Awake()
     { 
@@ -158,11 +145,10 @@ public class NewPlayerController : MonoBehaviour
     }
     private void HandleRotation() // need to make a third person with cinemacine
     {
-        if (_inputHandler.MoveInput.magnitude > 0)
+        if (_inputHandler.LookInput.magnitude > 0)
         {
-            float angle = Mathf.Atan2(_inputHandler.MoveInput.y, _inputHandler.MoveInput.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(_inputHandler.LookInput.y, _inputHandler.LookInput.x) * Mathf.Rad2Deg;
 
-            angle -= _mainCameraTransform.transform.eulerAngles.y * 2;
             // Rotate the player towards the calculated angle
             Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, RotateSpeed * Time.deltaTime);
@@ -192,50 +178,7 @@ public class NewPlayerController : MonoBehaviour
         _isJumping = false;
         _isGrounded = false;
     }
-    private void HangingEdge(Transform hit)
-    {
-        _isGrounded = false;
-
-        _gameObject.transform.SetParent(hit.transform);
-        _gameObject.transform.localPosition = Vector3.zero;
-
-    }
-    private void HangOnEdge()
-    {
-
-        Vector3 lateralMovement = new Vector3(_inputHandler.MoveInput.x, 0, 0).normalized * _edgeMovementSpeed;
-        _characterController.Move(lateralMovement * Time.deltaTime);
-        if (_inputHandler.JumpTriggered)
-        {
-            _moveDirection = transform.forward * _jumpHeight;
-            _moveDirection.y = _jumpHeight;
-            _moveDirection.z = transform.forward.z;
-            _isHangingEdge = false;
-            _gameObject.transform.SetParent(_Parent.transform);
-            _gameObject.transform.localPosition = Vector3.zero;
-        }
-        // Apply jump force away from the edge
-
-    }
-    private void OnMonkeyBar(Transform hit)
-    {
-        _isGrounded = false;
-
-        _gameObject.transform.SetParent(hit.transform);
-        _gameObject.transform.localPosition = Vector3.zero;
-    }
-    private void LeavingMonkeyBar()
-    {
-        _isGrounded = false;
-
-        _gameObject.transform.SetParent(_Parent.transform);
-        _gameObject.transform.localPosition = Vector3.zero;
-
-        Vector3 lateralMovement = new Vector3(0, 0, 1f).normalized * _edgeMovementSpeed;
-        _characterController.Move(lateralMovement * Time.deltaTime);
-        _isHangingMB = false;
-        _leavingMB = false;
-    }
+    
     private void Dash()
     {
         _isWalking = false;
@@ -251,12 +194,6 @@ public class NewPlayerController : MonoBehaviour
             // Stop dashing when the desired distance is reached
             _isDashing = false;
         }
-    }
-    
-    private void StopMovement()
-    {
-        _moveDirection = Vector3.zero;
-
     }
 
     public void TakeDamage()
@@ -283,6 +220,24 @@ public class NewPlayerController : MonoBehaviour
     public void UpdateScore()
     {
         _uiManager.UpdateScore(_maxScore , _score);
+    }
+
+    IEnumerator StopSpinAttack()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        _isSpinAttack = false;
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
+        if (newGameState == GameState.GamePlay)
+        {
+            _animator.speed = 1;
+        }
+        else
+        {
+            _animator.speed = 0;
+        }
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -322,19 +277,6 @@ public class NewPlayerController : MonoBehaviour
             {
                 enemy.TakeDamage();
             }
-        }
-    }
-
-    private void OnGameStateChanged(GameState newGameState)
-    {
-        enabled = newGameState == GameState.GamePlay;
-        if (newGameState == GameState.GamePlay)
-        {
-            _animator.speed = 1;
-        }
-        else
-        {
-            _animator.speed = 0;
         }
     }
 
@@ -418,9 +360,49 @@ public class NewPlayerController : MonoBehaviour
         get { return _isPaused; }
         set { _isPaused = value; }
     }
-    IEnumerator StopSpinAttack()
+
+    private void HangingEdge(Transform hit)
     {
-        yield return new WaitForSecondsRealtime(1);
-        _isSpinAttack = false;
+        _isGrounded = false;
+
+        _gameObject.transform.SetParent(hit.transform);
+        _gameObject.transform.localPosition = Vector3.zero;
+
+    }
+    private void HangOnEdge()
+    {
+
+        Vector3 lateralMovement = new Vector3(_inputHandler.MoveInput.x, 0, 0).normalized;
+        _characterController.Move(lateralMovement * Time.deltaTime);
+        if (_inputHandler.JumpTriggered)
+        {
+            _moveDirection = transform.forward * _jumpHeight;
+            _moveDirection.y = _jumpHeight;
+            _moveDirection.z = transform.forward.z;
+            _isHangingEdge = false;
+            _gameObject.transform.SetParent(_Parent.transform);
+            _gameObject.transform.localPosition = Vector3.zero;
+        }
+        // Apply jump force away from the edge
+
+    }
+    private void OnMonkeyBar(Transform hit)
+    {
+        _isGrounded = false;
+
+        _gameObject.transform.SetParent(hit.transform);
+        _gameObject.transform.localPosition = Vector3.zero;
+    }
+    private void LeavingMonkeyBar()
+    {
+        _isGrounded = false;
+
+        _gameObject.transform.SetParent(_Parent.transform);
+        _gameObject.transform.localPosition = Vector3.zero;
+
+        Vector3 lateralMovement = new Vector3(0, 0, 1f).normalized;
+        _characterController.Move(lateralMovement * Time.deltaTime);
+        _isHangingMB = false;
+        _leavingMB = false;
     }
 }

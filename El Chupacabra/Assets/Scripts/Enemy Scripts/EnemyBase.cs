@@ -16,7 +16,6 @@ public class BaseEnemy : MonoBehaviour
 
     [SerializeField] MeshRenderer _pointA;
     [SerializeField] MeshRenderer _pointB;
-
     [SerializeField] LayerMask _playerLayer;
 
     private string _type;
@@ -28,7 +27,6 @@ public class BaseEnemy : MonoBehaviour
     public float _timeBetweenAttacks;
     bool _attackAlready;
 
-    //States
     public float _sightRange;
     public float _attackRange;
     private bool _playerIsInMySight = false;
@@ -36,7 +34,6 @@ public class BaseEnemy : MonoBehaviour
 
     private void Awake()
     {
-
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     private void OnDestroy()
@@ -75,7 +72,6 @@ public class BaseEnemy : MonoBehaviour
 
     private void enemeyState()
     {
-        //Check for Sight and Attack Range
         _playerIsInMySight = Physics.CheckSphere(transform.position, _sightRange, _playerLayer);
         _playerInAttackRange = Physics.CheckSphere(transform.position, _attackRange, _playerLayer);
 
@@ -96,7 +92,6 @@ public class BaseEnemy : MonoBehaviour
     private void Patroling()
     {
         _animator.SetBool("Attacking", false);
-
         if (_goingToTA)
         {
             _enemyAgent.SetDestination(_pointA.gameObject.transform.position);
@@ -112,23 +107,18 @@ public class BaseEnemy : MonoBehaviour
         {
             _goingToTA = !_goingToTA;
         }
-
     }
 
     private void ChasePlayer() // great
     {
         _animator.SetBool("Attacking", false);
-
         _enemyAgent.SetDestination(_player.position);
     }
-
     private void AttackPlayer()
     {
-        
         _enemyAgent.velocity = Vector3.zero;
         _animator.SetBool("Attacking", true);
         _enemyAgent.SetDestination(_player.position); 
-
         transform.LookAt(_player);
 
         if (!_attackAlready)
@@ -137,9 +127,7 @@ public class BaseEnemy : MonoBehaviour
             {
                 case "Shooter": ShooterAttack(); break;
                 case "Giant": MeleeAttack(); break;
-                case "Flyer": break;
             }
- 
         }
     }
 
@@ -150,7 +138,6 @@ public class BaseEnemy : MonoBehaviour
 
     public void TakeDamage()
     {
-        Debug.Log(_EnemyHealthPoint);
         _EnemyHealthPoint--;
         if (_EnemyHealthPoint == 0)
         {

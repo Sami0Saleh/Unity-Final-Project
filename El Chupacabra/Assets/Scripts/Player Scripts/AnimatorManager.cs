@@ -20,29 +20,6 @@ public class AnimatorManager : MonoBehaviour
         if (_PContro.IsDashing)
         { TriggerAttack("Dash"); }
 
-        // move right
-        /* if (!_edgeMovement && Input.GetKeyDown(KeyCode.D))
-         { TriggerHangEdgeMovement(true); }
-         else if (_edgeMovement && Input.GetKeyDown(KeyCode.D))
-         { TriggerHangEdgeMovement(true); SetMirrorBool(false);  }
-         else if (Input.GetKeyUp(KeyCode.D)) { TriggerHangEdgeMovement(false); }*/
-
-        // move left
-        /* if (!_edgeMovement && Input.GetKeyDown(KeyCode.A))
-         { TriggerHangEdgeMovement(true); }
-         else if (_edgeMovement && Input.GetKeyDown(KeyCode.A))
-         { TriggerHangEdgeMovement(true); SetMirrorBool(true); }
-         else if (Input.GetKeyUp(KeyCode.A)) { TriggerHangEdgeMovement(false); }*/
-
-        // leave edge
-        /* if (_hangingEdgeStarted && Input.GetKey(KeyCode.Space))
-         {
-             LeaveEdge(true);
-         }
-         else if (_hangingEdgeStarted && Input.GetKey(KeyCode.S))
-         {
-             LeaveEdge(false);
-         }*/
 
         if (_PContro.IsWalking)
         { TriggerWalkAnim(true); }
@@ -60,14 +37,7 @@ public class AnimatorManager : MonoBehaviour
         { TriggerLandingAnimation(true); }
         else
         { TriggerLandingAnimation(false); }
-
-
-        /* if (_PContro.IsHangingMB)
-         { TriggerHangMBIdleAnim(true); }
-         else if (_hangingMBStarted && _PContro.LeavingMB)
-         { TriggerHangMBIdleAnim(false); }*/
-    } // should convert into lambda
-
+    }
     
    
     private void TriggerWalkAnim(bool trigger) // Walk Animation
@@ -100,20 +70,6 @@ public class AnimatorManager : MonoBehaviour
         }
         else { _playerAnimator.SetBool("Grounded", false); }
     }
-    private void TriggerHangMBIdleAnim(bool trigger) // Hang MonkeyBar Animation
-    {
-        if (trigger)
-        {
-            _hangingMBStarted = true;
-            _playerAnimator.SetBool("HangingMB", true);
-        }
-        else
-        {
-            _hangingMBStarted = false;
-            _playerAnimator.SetBool("HangingMB", false);
-        }
-       
-    }
 
     // Edge Animations
     private void TriggerHangEdgeAnim(bool trigger) // Hang Edge Animation
@@ -128,6 +84,29 @@ public class AnimatorManager : MonoBehaviour
             _hangingEdgeStarted = true;
             _playerAnimator.SetBool("HangingEdge", false);
         }
+    }
+
+    
+    private void TriggerAttack(string attackType) // Attack Animation
+    {
+        _playerAnimator.SetBool("IsAttacking", true);
+        _playerAnimator.SetTrigger($"{attackType}Attack");
+        Invoke($"Reset{attackType}Trigger", 1);
+    }
+    private void ResetSpinTrigger() 
+    {
+        _playerAnimator.ResetTrigger("SpinAttack");
+        _playerAnimator.SetBool("IsAttacking", false);
+    }
+    private void ResetDashTrigger()
+    {
+        _playerAnimator.ResetTrigger("DashAttack");
+        _playerAnimator.SetBool("IsAttacking", false);
+    }
+
+    private void SetMirrorBool(bool mirror)
+    {
+        _playerAnimator.SetBool("Mirror", mirror);  
     }
     private void TriggerHangEdgeMovement(bool trigger) // Hang Edge Movment Anmation
     {
@@ -153,26 +132,18 @@ public class AnimatorManager : MonoBehaviour
         else if (!up)
         { _playerAnimator.SetTrigger("DropEdge"); }
     }
-    
-    private void TriggerAttack(string attackType) // Attack Animation
+    private void TriggerHangMBIdleAnim(bool trigger) // Hang MonkeyBar Animation
     {
-        _playerAnimator.SetBool("IsAttacking", true);
-        _playerAnimator.SetTrigger($"{attackType}Attack");
-        Invoke($"Reset{attackType}Trigger", 1);
-    }
-    private void ResetSpinTrigger() 
-    {
-        _playerAnimator.ResetTrigger("SpinAttack");
-        _playerAnimator.SetBool("IsAttacking", false);
-    }
-    private void ResetDashTrigger()
-    {
-        _playerAnimator.ResetTrigger("DashAttack");
-        _playerAnimator.SetBool("IsAttacking", false);
-    }
+        if (trigger)
+        {
+            _hangingMBStarted = true;
+            _playerAnimator.SetBool("HangingMB", true);
+        }
+        else
+        {
+            _hangingMBStarted = false;
+            _playerAnimator.SetBool("HangingMB", false);
+        }
 
-    private void SetMirrorBool(bool mirror)
-    {
-        _playerAnimator.SetBool("Mirror", mirror);  
     }
 }
