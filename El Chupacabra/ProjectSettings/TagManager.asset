@@ -9,6 +9,8 @@ TagManager:
   - ground
   - damage
   - enemy
+  - collectible
+  - checkPoint
   layers:
   - Default
   - TransparentFX

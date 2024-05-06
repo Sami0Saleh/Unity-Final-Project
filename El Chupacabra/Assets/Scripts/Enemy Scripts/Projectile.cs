@@ -5,6 +5,27 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float _speed;
+    private void Awake()
+    {
+
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
+        if (newGameState == GameState.GamePlay)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
+    }
     void Update()
     {
         transform.Translate(Vector3.forward * _speed * Time.deltaTime);

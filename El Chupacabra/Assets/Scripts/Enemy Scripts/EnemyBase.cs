@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.UI; 
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEditor.PackageManager;
 
 public class BaseEnemy : MonoBehaviour
 {
@@ -34,6 +33,30 @@ public class BaseEnemy : MonoBehaviour
     public float _attackRange;
     private bool _playerIsInMySight = false;
     private bool _playerInAttackRange = false;
+
+    private void Awake()
+    {
+
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
+        if (newGameState == GameState.GamePlay) 
+        {
+            Time.timeScale = 1;
+            _animator.speed = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            _animator.speed = 0;
+        }
+    }
 
     private void Start()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseUI : MonoBehaviour
 {
+    [SerializeField] NewPlayerController _playerController;
     [SerializeField] GameObject _options;
     [SerializeField] GameObject _save;
     [SerializeField] GameObject _load;
@@ -18,8 +19,9 @@ public class PauseUI : MonoBehaviour
             : GameState.GamePlay;
         GameStateManager.Instance.SetState(newGameState);
         AudioListener.pause = true;
+        _playerController.IsPaused = true;
     }
-    public void ContinueButton()
+    public void ContinueGame()
     {
         gameObject.SetActive(false);
         GameState currentGameState = GameStateManager.Instance.CurrentGameState;
@@ -28,6 +30,7 @@ public class PauseUI : MonoBehaviour
             : GameState.GamePlay;
         GameStateManager.Instance.SetState(newGameState);
         AudioListener.pause = false;
+        _playerController.IsPaused = false;
     }
     public void OptionsButton()
     {

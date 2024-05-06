@@ -14,6 +14,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] PauseUI _pause;
     [SerializeField] UIManager _uiManager;
     [SerializeField] GameEndManager _gameEndManager;
+    [SerializeField] Animator _animator;
 
     // Private Variables 
     private Vector3 _moveDirection = Vector3.zero;
@@ -47,6 +48,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] bool _isHangingMB = false;
     [SerializeField] bool _isHangingEdge = false;
     [SerializeField] bool _leavingMB = false;
+    [SerializeField] bool _isPaused = false;
 
     [Header("Movement Speeds")]
     private float _walkSpeed = 3.0f;
@@ -117,7 +119,7 @@ public class NewPlayerController : MonoBehaviour
         else if (_inputHandler.SpinTriggered)
         {
             _isSpinAttack = true;
-            Invoke("CancelSpin", 1);
+            StartCoroutine(StopSpinAttack());
         }
         else if (_isHangingEdge)
         {
@@ -151,9 +153,13 @@ public class NewPlayerController : MonoBehaviour
         }
         if (CheckIfShouldMove())
         { _characterController.Move(_moveDirection * Time.deltaTime); }
-        if (_inputHandler.PauseTriggered)
+        if (!_isPaused && _inputHandler.PauseTriggered)
         {
             _pause.PauseGame();
+        }
+        else if (_isPaused && _inputHandler.PauseTriggered)
+        {
+            _pause.ContinueGame();
         }
         if (_enemyCount == _maxEnemyCount && _score == _maxScore)
         {
@@ -256,10 +262,7 @@ public class NewPlayerController : MonoBehaviour
             _isDashing = false;
         }
     }
-    private void CancelSpin()
-    {
-      _isSpinAttack = false;
-    }
+    
     private void StopMovement()
     {
         _moveDirection = Vector3.zero;
@@ -335,13 +338,13 @@ public class NewPlayerController : MonoBehaviour
     private void OnGameStateChanged(GameState newGameState)
     {
         enabled = newGameState == GameState.GamePlay;
-        if (newGameState == GameState.GamePlay) { _inputHandler.gameObject.SetActive(true); }
-            //_animator.speed = 1;
+        if (newGameState == GameState.GamePlay)
+        {
+            _animator.speed = 1;
+        }
         else
         {
-            _inputHandler.gameObject.SetActive(false);
-            //_animator.speed = 0;
-            StopMovement();
+            _animator.speed = 0;
         }
     }
 
@@ -390,6 +393,14 @@ public class NewPlayerController : MonoBehaviour
         get { return _isDashing; }
         set { _isDashing = value; }
     }
+    public int MaxHp
+    {
+        get { return _maxHp; }
+    }
+    public int CurrentHp
+    {
+        get { return _currentHp; }
+    }
     public int MaxScore
     {
         get { return _maxScore; }
@@ -410,5 +421,14 @@ public class NewPlayerController : MonoBehaviour
         get { return _enemyCount; }
         set { _enemyCount = value; }
     }
-
+    public bool IsPaused
+    {
+        get { return _isPaused; }
+        set { _isPaused = value; }
+    }
+    IEnumerator StopSpinAttack()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        _isSpinAttack = false;
+    }
 }

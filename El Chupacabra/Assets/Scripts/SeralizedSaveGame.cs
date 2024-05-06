@@ -5,11 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class SerializedSaveGame
 {
-    private int loadPlayerHP;
-    private int loadPlayerCheckPoint;
-    private Vector3 loadPlayerPosition;
-    private float LoadVolume;
-
-    // player prefrences
-
+    public int playerHP;
+    public int playerMaxScore;
+    public int playerScore;
+    public int enemyCount;
+    public int maxEnemyCount;
+    public Vector3 playerPosition;
+    public Vector3 lastCheckpointPosition;
+    public Vector3[] CheckpointPosition;
+    public Vector3[] collectiblesPositions;
+    public Vector3[] enemyPositions;
+    public float volume;
 }

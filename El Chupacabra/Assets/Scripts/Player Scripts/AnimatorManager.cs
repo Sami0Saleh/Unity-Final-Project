@@ -48,28 +48,18 @@ public class AnimatorManager : MonoBehaviour
         { TriggerWalkAnim(true); }
         if (!_PContro.IsWalking)
         { TriggerWalkAnim(false); }
-
         if (_PContro.IsJumping)
         { TriggerJumpAnim(true); }
         else if (!_PContro.IsJumping)
         { TriggerJumpAnim(false); }
         if (_PContro.IsDoubleJumping)
-        {
-            TriggerDoubleJumpAnim(true);
-        }
+        { TriggerDoubleJumpAnim(true); }
         else if (!_PContro.IsDoubleJumping)
-        {
-            {
-                TriggerDoubleJumpAnim(false);
-            }
-        }
-
+        { TriggerDoubleJumpAnim(false); }
         if (_PContro.IsGrounded)
-        {
-            TriggerLandingAnimation(true);
-        }
-        else {TriggerLandingAnimation(false);
-    }
+        { TriggerLandingAnimation(true); }
+        else
+        { TriggerLandingAnimation(false); }
 
 
         /* if (_PContro.IsHangingMB)
@@ -168,11 +158,7 @@ public class AnimatorManager : MonoBehaviour
     {
         _playerAnimator.SetBool("IsAttacking", true);
         _playerAnimator.SetTrigger($"{attackType}Attack");
-        Invoke($"Reset{attackType}Trigger", 2);
-     /*   if (attackType == "Dash")
-        { ResetDashTrigger(); }
-        else if (attackType == "Spin")
-        { ResetSpinTrigger(); }*/
+        Invoke($"Reset{attackType}Trigger", 1);
     }
     private void ResetSpinTrigger() 
     {
