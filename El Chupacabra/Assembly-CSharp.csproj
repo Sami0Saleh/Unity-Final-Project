@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Misc Scripts\SaveNLoadJson.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PauseSaveUI.cs" />
     <Compile Include="Assets\ComicArtUI\Script\UI\UIScrollTextArea.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerSavePrefs.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\CreditsUI.cs" />
     <Compile Include="Assets\ComicArtUI\Script\GameManager.cs" />
