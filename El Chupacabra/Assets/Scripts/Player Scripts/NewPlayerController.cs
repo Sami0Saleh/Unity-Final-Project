@@ -17,6 +17,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] UIManager _uiManager;
     [SerializeField] GameEndManager _gameEndManager;
     [SerializeField] Animator _animator;
+    [SerializeField] AudioSource AttackSound;
 
     // Private Variables 
     private Vector3 _moveDirection = Vector3.zero;
@@ -97,6 +98,7 @@ public class NewPlayerController : MonoBehaviour
         }
         else if (_inputHandler.SpinTriggered)
         {
+           if(!AttackSound.isPlaying) AttackSound.Play();
             _isSpinAttack = true;
             StartCoroutine(StopSpinAttack());
         }
@@ -183,6 +185,7 @@ public class NewPlayerController : MonoBehaviour
     
     private void Dash()
     {
+        if (!AttackSound.isPlaying) AttackSound.Play();
         _isWalking = false;
         float distanceTraveled = Vector3.Distance(_dashStartPosition, transform.position);
 
