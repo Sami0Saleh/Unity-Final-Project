@@ -8,7 +8,8 @@ using UnityEditor.PackageManager;
 public class BaseEnemy : MonoBehaviour
 {
     [SerializeField] EnemySO _enemySO;
-    [SerializeField] NavMeshAgent _enemyAgent; 
+    [SerializeField] NavMeshAgent _enemyAgent;
+    [SerializeField] NewPlayerController _playerController;
     [SerializeField] Transform _player; 
     [SerializeField] GameObject _projectile;
     [SerializeField] Animator _animator;
@@ -39,16 +40,14 @@ public class BaseEnemy : MonoBehaviour
         _EnemyHealthPoint = _enemySO.startingHealth;
         _baseSpeed = _enemySO.baseSpeed;
         _type = _enemySO.type.ToString();
+        _playerController.MaxEnemyCount++;
         
-
         _pointA.enabled = false;
         _pointB.enabled = false;
     }
     void Update()
     {
         enemeyState();
-        Debug.Log($"Attacking is {_animator.GetBool("Attacking")}");
-
     }
 
     private void enemeyState()
@@ -59,12 +58,10 @@ public class BaseEnemy : MonoBehaviour
 
         if (!_playerIsInMySight && !_playerInAttackRange)
         {
-            Debug.Log("Patroling");
             Patroling();
         }
         else if (_playerIsInMySight && !_playerInAttackRange)
         {
-            Debug.Log("Chasing");
             ChasePlayer();
         }
         else if(_playerIsInMySight && _playerInAttackRange)
@@ -113,7 +110,6 @@ public class BaseEnemy : MonoBehaviour
 
         if (!_attackAlready)
         {
-            Debug.Log(_type);
             switch (_type)
             {
                 case "Shooter": ShooterAttack(); break;
@@ -129,18 +125,16 @@ public class BaseEnemy : MonoBehaviour
         _attackAlready= false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage()
     {
         Debug.Log(_EnemyHealthPoint);
         _EnemyHealthPoint--;
-        if (_EnemyHealthPoint <= 0)
+        if (_EnemyHealthPoint == 0)
         {
-           Invoke(nameof(DestroyEnemy), 0.5f);
+            _playerController.EnemyCount ++;
+            _playerController.UpdateEnemyCount();
+            Destroy(gameObject);
         }
-    }
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
     }
 
     private void OnDrawGizmos() // SHOULD BE REMOVED
@@ -151,18 +145,8 @@ public class BaseEnemy : MonoBehaviour
        Gizmos.DrawWireSphere(transform.position, _sightRange);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "PlayerFist")
-        {
-            Debug.Log("Been Attacked");
-            TakeDamage(1);
-        }
-    }
-
     private void ShooterAttack()
     {
-        Debug.Log("Im Shooting Youu");
         Instantiate(_projectile, _thornSpawner.position, _thornSpawner.rotation);
         _attackAlready = true;
         Invoke(nameof(ResetAttack), _timeBetweenAttacks);

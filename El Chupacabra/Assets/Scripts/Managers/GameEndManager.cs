@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameEndManager : MonoBehaviour
 {
-    public void GameEnd()
+    public void GameWon()
     {
         gameObject.SetActive(true);
         GameState currentGameState = GameStateManager.Instance.CurrentGameState;

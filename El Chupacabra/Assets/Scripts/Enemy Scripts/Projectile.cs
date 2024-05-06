@@ -12,6 +12,14 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Player")
+        {
+            NewPlayerController newPlayerController = other.GetComponent<NewPlayerController>();
+            if (newPlayerController != null)
+            {
+                newPlayerController.TakeDamage();
+            }
+        }
         Destroy(gameObject);
     }
 }

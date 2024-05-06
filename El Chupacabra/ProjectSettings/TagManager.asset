@@ -8,6 +8,7 @@ TagManager:
   - monkeyBar
   - ground
   - damage
+  - enemy
   layers:
   - Default
   - TransparentFX
