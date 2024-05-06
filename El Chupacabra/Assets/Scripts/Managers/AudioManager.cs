@@ -9,7 +9,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource Music;
     [SerializeField] AudioSource Collectible;
     [SerializeField] AudioSource PlayerAudioSource;
-    [SerializeField] AudioSource Enemey;
+    [SerializeField] AudioSource RangedEnemy;
+    [SerializeField] AudioSource MeleeEnemey;
     //
     [SerializeField] AudioClip Music_Welcome; // Start Game Music
     [SerializeField] AudioClip Music_GameOver; // Game over Music
@@ -35,6 +36,8 @@ public class AudioManager : MonoBehaviour
     //
     [SerializeField] AudioClip SmackHitSound; // Bonus SFX, Basic Hit Sound of Smack.
     [SerializeField] AudioClip Enemy_RangedMiss; // When the enemy misses the player with the with Ranged Attack
+    [SerializeField] AudioClip Enemy_MeleeHit; // When the enemy misses the player with the with Ranged Attack
+    [SerializeField] AudioClip Enemy_MeleeMiss; // When the enemy misses the player with the with Ranged Attack
 
 
 

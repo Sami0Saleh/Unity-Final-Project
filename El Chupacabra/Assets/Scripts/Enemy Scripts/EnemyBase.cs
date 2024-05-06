@@ -19,6 +19,14 @@ public class BaseEnemy : MonoBehaviour
 
     [SerializeField] LayerMask _playerLayer;
 
+    //
+
+    [SerializeField] AudioClip SmackHitSound; // Bonus SFX, Basic Hit Sound of Smack.
+    [SerializeField] AudioClip Enemy_RangedMiss; // When the enemy misses the player with the with Ranged Attack
+    [SerializeField] AudioClip Enemy_MeleeHit; // When the enemy misses the player with the with Ranged Attack
+    [SerializeField] AudioClip Enemy_MeleeMiss; // When the enemy misses the player with the with Ranged Attack
+
+
     private string _type;
     private Vector3 _distanceToWalkPoint;
     private bool _goingToTA = true;
