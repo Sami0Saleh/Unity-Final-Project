@@ -30,7 +30,7 @@ public class NewPlayerController : MonoBehaviour
     private float RotateSpeed = 3;
 
 
-    [SerializeField] int _maxHp = 3;
+    [SerializeField] int _maxHp;
     [SerializeField] int _currentHp;
     [SerializeField] int _maxScore = 0;
     [SerializeField] int _score = 0;
@@ -238,7 +238,6 @@ public class NewPlayerController : MonoBehaviour
         else
         {
             Cursor.lockState = CursorLockMode.None;
-
             _animator.speed = 0;
         }
     }

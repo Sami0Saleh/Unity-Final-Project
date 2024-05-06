@@ -37,7 +37,6 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DashTriggered { get; private set; }
     public bool SpinTriggered { get; private set; }
     public bool PauseTriggered { get; private set; }
-
     public float SprintValue { get; private set; }
 
 
@@ -117,7 +116,4 @@ public class PlayerInputHandler : MonoBehaviour
         _sprintAction?.Disable();
         _pauseAction?.Disable();
     }
-
-     
-
 }

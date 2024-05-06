@@ -22,7 +22,7 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log("CheckPoint");
             _redSign.enabled = false;

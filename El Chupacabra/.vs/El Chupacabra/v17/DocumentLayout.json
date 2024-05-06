@@ -1,17 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\",
+  "WorkspaceRootPath": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\misc scripts\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\misc scripts\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\misc scripts\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\player scripts\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\player scripts\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player scripts\\newplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\ratch\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\player scripts\\groundcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\new input system\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|c:\\users\\samis\\onedrive\\desktop\\unity-final-project\\el chupacabra\\assets\\scripts\\misc scripts\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\misc scripts\\collectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\assets\\scripts\\player scripts\\groundcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75444615-703C-6E67-0BAB-880E1F590940}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player scripts\\groundcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,34 +34,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerInputHandler.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\New Input System\\PlayerInputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\New Input System\\PlayerInputHandler.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\New Input System\\PlayerInputHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\New Input System\\PlayerInputHandler.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwHYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:56:06.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Managers\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UIManager.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Managers\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\UIManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:33:38.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Collectibles.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Misc Scripts\\Collectibles.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Misc Scripts\\Collectibles.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Misc Scripts\\Collectibles.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Misc Scripts\\Collectibles.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAywCcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:27:31.803Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CheckPoint.cs",
-              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Misc Scripts\\CheckPoint.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Misc Scripts\\CheckPoint.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Misc Scripts\\CheckPoint.cs",
-              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Misc Scripts\\CheckPoint.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Misc Scripts\\CheckPoint.cs",
               "RelativeToolTip": "Assets\\Scripts\\Misc Scripts\\CheckPoint.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBgAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T14:40:10.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "GroundCheck.cs",
-              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\GroundCheck.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\GroundCheck.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\GroundCheck.cs",
-              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\GroundCheck.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\GroundCheck.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\GroundCheck.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAiAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T14:16:27.347Z",
               "EditorCaption": ""
@@ -58,11 +105,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "NewPlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
-              "ToolTip": "C:\\Users\\ratch\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
+              "ToolTip": "C:\\Users\\samis\\OneDrive\\Desktop\\Unity-Final-Project\\El Chupacabra\\Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\NewPlayerController.cs",
-              "ViewState": "AQIAAPQAAAAAAAAAAAAAAAgBAAAeAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAuwCAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T11:20:14.821Z",
               "EditorCaption": ""
