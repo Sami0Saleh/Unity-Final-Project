@@ -64,6 +64,7 @@
     <Compile Include="Assets\ComicArtUI\Script\Component\LoadSceneAfterDelay.cs" />
     <Compile Include="Assets\Scripts\New Input System\PlayerInputHandler.cs" />
     <Compile Include="Assets\ComicArtUI\Script\UI\UIPopupController.cs" />
+    <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\OptionsUI.cs" />
     <Compile Include="Assets\Scripts\Game State\GameState.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\NewPlayerController.cs" />
@@ -97,9 +98,11 @@
     <Compile Include="Assets\Scripts\UI Scripts\PauseOptionsUI.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Imported Assets\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Imported Assets\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Basic.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
