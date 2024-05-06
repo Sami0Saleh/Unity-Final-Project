@@ -15,5 +15,7 @@ public class SerializedSaveGame
     public Vector3[] CheckpointPosition;
     public Vector3[] collectiblesPositions;
     public Vector3[] enemyPositions;
+    public GameObject[] enemyObjects;
+    public GameObject[] collectiblesObjects;
     public float volume;
 }
