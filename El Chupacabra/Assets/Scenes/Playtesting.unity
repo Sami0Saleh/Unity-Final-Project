@@ -123,6 +123,72 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &6374530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6374532}
+  - component: {fileID: 6374531}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &6374531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2560782499a38f046beb7a23a1ecbe37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  Music: {fileID: 0}
+  Collectible: {fileID: 0}
+  PlayerAudioSource: {fileID: 0}
+  Enemey: {fileID: 0}
+  Music_Welcome: {fileID: 8300000, guid: 7221053580fcded4f932a27985ee71d4, type: 3}
+  Music_GameOver: {fileID: 8300000, guid: b44a7229a6b496641939c4822fd9a669, type: 3}
+  Music_Deloop: {fileID: 8300000, guid: 6492e99e6f44e724caf05fbe6a99d446, type: 3}
+  CollectedGem: {fileID: 8300000, guid: d58e5d630eff358409aa5343d0512838, type: 3}
+  PlayerWalkingSound: {fileID: 8300000, guid: 0f47d8001f1c18241a097901d174c1e6, type: 3}
+  JumpSound: {fileID: 8300000, guid: 6aeaf1caad4ccd04482f3382cfabb50f, type: 3}
+  fullYell: {fileID: 8300000, guid: 9cd47f206b5bdea4491457ca813c7399, type: 3}
+  Yell_P1: {fileID: 8300000, guid: 2bd004abd431274449174228967d6ce9, type: 3}
+  Yell_P2: {fileID: 8300000, guid: 6f549a157f22de64b8cf1a1050f2ff50, type: 3}
+  Basic_GotHitSound: {fileID: 8300000, guid: 168a9c794bb7e9a43a4e52aa04dfcb71, type: 3}
+  Melee_GotHitSound: {fileID: 8300000, guid: 18bc7de0afb7dfe4ba9a33ecb33150d7, type: 3}
+  SpinAttack_Hit: {fileID: 8300000, guid: 543856ed7d0e3074699fc89d5cd999af, type: 3}
+  SpinAttack_Miss: {fileID: 8300000, guid: 06879932c0254fb4287c43e354d1b8c0, type: 3}
+  Dash_Hit: {fileID: 8300000, guid: b1839dbe5ee1a794792ed2499579b526, type: 3}
+  Dash_Miss: {fileID: 8300000, guid: 2dc0a63d229032b4da1050da5cfe53b5, type: 3}
+  SmackHitSound: {fileID: 8300000, guid: 6168f5c12af427446be680d216e88185, type: 3}
+  Enemy_RangedMiss: {fileID: 8300000, guid: cf93a77e2fa62974883f1ea9b225859a, type: 3}
+--- !u!4 &6374532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374530}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.642444, y: -0.91188323, z: 13.58101}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8543421
 GameObject:
   m_ObjectHideFlags: 0
@@ -7383,6 +7449,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699258381}
   m_CullTransparentMesh: 1
+--- !u!1 &1635355789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635355790}
+  m_Layer: 0
+  m_Name: -----------------------------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635355790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635355789}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.642444, y: -0.91188323, z: 13.58101}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658093168
 GameObject:
   m_ObjectHideFlags: 0
@@ -8167,7 +8264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715394057}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12918922, y: 0.604397, z: -0.10013859, w: -0.779735}
+  m_LocalRotation: {x: -0.12918922, y: 0.604397, z: -0.10013858, w: -0.779735}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10380,3 +10477,5 @@ SceneRoots:
   - {fileID: 743694269}
   - {fileID: 648115460}
   - {fileID: 1895479661}
+  - {fileID: 1635355790}
+  - {fileID: 6374532}
