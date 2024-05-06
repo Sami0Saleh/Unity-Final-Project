@@ -7952,7 +7952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715394057}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12918922, y: 0.604397, z: -0.10013858, w: -0.779735}
+  m_LocalRotation: {x: -0.12918922, y: 0.604397, z: -0.10013859, w: -0.779735}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10161,7 +10161,7 @@ MonoBehaviour:
   _isHangingEdge: 0
   _leavingMB: 0
   _characterController: {fileID: 7378642632881554801}
-  _mainCamera: {fileID: 810065950}
+  _mainCameraTransform: {fileID: 1658093173}
   _inputHandler: {fileID: 709135838}
 --- !u!143 &7378642632881554801
 CharacterController:
